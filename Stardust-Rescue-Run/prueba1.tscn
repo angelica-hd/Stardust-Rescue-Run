@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvwktk50c7s4u"]
+
+[ext_resource type="Texture2D" uid="uid://ohol0st4lhck" path="res://icon.svg" id="1_iivsi"]
+[ext_resource type="Script" path="res://SpaceshipTest.gd" id="1_llk7r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
+radius = 221.742
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hccj3"]
+radius = 31.0161
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(379, 271)
+collision_layer = 3
+gravity_space_override = 2
+gravity_point = true
+gravity = 1500.0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ylmco")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(64, 92)
+collision_layer = 3
+motion_mode = 1
+script = ExtResource("1_llk7r")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_hccj3")
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -6)
+texture = ExtResource("1_iivsi")
