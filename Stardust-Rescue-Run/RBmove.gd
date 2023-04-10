@@ -4,13 +4,17 @@ extends RigidBody2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var pos = position
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-func _integrate_forces(delta):
+func _physics_process(delta):
 	move()
+	
+	# if Input.is_action_just_pressed("ui_accept"):
+	# 	for body in $Area2D.get_overlapping_bodies():
+	# 		if body != $SPACESHIP:
+	# 			body.hide()
 
 func move():
 	if Input.is_action_pressed('ui_right'):
