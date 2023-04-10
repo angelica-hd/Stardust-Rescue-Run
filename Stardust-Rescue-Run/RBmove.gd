@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-func _physics_process(delta):
+func _integrate_forces(delta): # FUNCIONA A VECES, CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
 	
 	# if Input.is_action_just_pressed("ui_accept"):

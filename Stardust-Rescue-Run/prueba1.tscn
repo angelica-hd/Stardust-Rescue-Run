@@ -41,7 +41,7 @@ radius = 315.729
 position = Vector2(318, 737)
 collision_layer = 3
 input_pickable = false
-gravity_space_override = 2
+gravity_space_override = 1
 gravity_point = true
 gravity = 1000.0
 linear_damp_space_override = 2
@@ -99,7 +99,7 @@ shape = SubResource("CircleShape2D_iy8kw")
 
 [node name="Planeta2" type="Area2D" parent="."]
 position = Vector2(1014, 173)
-gravity_space_override = 2
+gravity_space_override = 1
 gravity_point = true
 gravity = 500.0
 angular_damp = 20.0
@@ -116,7 +116,7 @@ shape = SubResource("CircleShape2D_mwdt7")
 
 [node name="Planeta3" type="Area2D" parent="."]
 position = Vector2(1377, 913)
-gravity_space_override = 2
+gravity_space_override = 1
 gravity_point = true
 gravity = -1000.0
 angular_damp = 20.0
