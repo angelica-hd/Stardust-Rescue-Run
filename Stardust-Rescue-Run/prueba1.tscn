@@ -1,29 +1,66 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvwktk50c7s4u"]
+[gd_scene load_steps=15 format=3 uid="uid://bvwktk50c7s4u"]
 
+[ext_resource type="Script" path="res://AttemptingGravity.gd" id="1_4esra"]
 [ext_resource type="Texture2D" uid="uid://ohol0st4lhck" path="res://icon.svg" id="1_iivsi"]
 [ext_resource type="Script" path="res://SpaceshipTest.gd" id="1_llk7r"]
+[ext_resource type="Script" path="res://RBmove.gd" id="4_ww3j6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
-radius = 221.742
+radius = 389.329
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fmeyo"]
+friction = 0.3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y84yg"]
+radius = 189.13
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hccj3"]
-radius = 31.0161
+radius = 63.0714
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqstc"]
+radius = 66.4172
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iy8kw"]
+radius = 79.0253
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0eup5"]
+radius = 232.174
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
+friction = 0.3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwdt7"]
+radius = 94.0479
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lihb6"]
+radius = 315.729
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(379, 271)
+[node name="Planeta1" type="Area2D" parent="."]
+position = Vector2(318, 737)
 collision_layer = 3
-gravity_space_override = 2
+input_pickable = false
+gravity_space_override = 1
 gravity_point = true
-gravity = 1500.0
+gravity = 1000.0
+linear_damp_space_override = 2
+angular_damp_space_override = 2
+script = ExtResource("1_4esra")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Planeta1"]
 shape = SubResource("CircleShape2D_ylmco")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Planeta1"]
+physics_material_override = SubResource("PhysicsMaterial_fmeyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta1/StaticBody2D"]
+shape = SubResource("CircleShape2D_y84yg")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(64, 92)
+position = Vector2(2867, 99)
 collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_llk7r")
@@ -35,3 +72,61 @@ shape = SubResource("CircleShape2D_hccj3")
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -6)
 texture = ExtResource("1_iivsi")
+
+[node name="SPACESHIP" type="RigidBody2D" parent="."]
+position = Vector2(493, 202)
+mass = 0.5
+gravity_scale = 0.7
+lock_rotation = true
+script = ExtResource("4_ww3j6")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="SPACESHIP"]
+position = Vector2(-2, -1)
+texture = ExtResource("1_iivsi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP"]
+position = Vector2(-2.5, -1)
+shape = SubResource("CircleShape2D_sqstc")
+
+[node name="Camera2D" type="Camera2D" parent="SPACESHIP"]
+zoom = Vector2(0.7, 0.7)
+
+[node name="Area2D" type="Area2D" parent="SPACESHIP"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP/Area2D"]
+shape = SubResource("CircleShape2D_iy8kw")
+
+[node name="Planeta2" type="Area2D" parent="."]
+position = Vector2(1014, 173)
+gravity_space_override = 1
+gravity_point = true
+gravity = 500.0
+angular_damp = 20.0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta2"]
+shape = SubResource("CircleShape2D_0eup5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Planeta2"]
+physics_material_override = SubResource("PhysicsMaterial_kfr1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta2/StaticBody2D"]
+shape = SubResource("CircleShape2D_mwdt7")
+
+[node name="Planeta3" type="Area2D" parent="."]
+position = Vector2(1377, 913)
+gravity_space_override = 1
+gravity_point = true
+gravity = -1000.0
+angular_damp = 20.0
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Planeta3"]
+physics_material_override = SubResource("PhysicsMaterial_kfr1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta3/StaticBody2D"]
+shape = SubResource("CircleShape2D_mwdt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta3"]
+shape = SubResource("CircleShape2D_lihb6")
