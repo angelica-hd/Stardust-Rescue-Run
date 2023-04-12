@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cvqcqy81oyqss"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ax6t"]
+shadow_size = 8
+
+[resource]
+default_font_size = 13
+Label/font_sizes/font_size = 40
+Label/styles/normal = SubResource("StyleBoxFlat_6ax6t")
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0

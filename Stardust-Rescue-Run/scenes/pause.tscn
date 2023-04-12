@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://djaoi8pchd0qq"]
+
+[sub_resource type="GDScript" id="GDScript_xiht1"]
+script/source = "#extends RigidBody2D
+extends MarginContainer
+@onready var resume = %Resume
+@onready var retry = %Retry
+@onready var exit = %Exit
+
+#hgahah
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	resume.pressed.connect(_on_resume_pressed)
+	retry.pressed.connect(_on_retry_pressed)
+	exit.pressed.connect(_on_exit_pressed)
+	hide()
+	
+func _input(event):
+	if event.is_action_pressed(\"pausa\"):
+		show()
+		get_tree().paused = true
+
+func _on_resume_pressed():
+	hide()
+	get_tree().paused = false
+	
+func _on_retry_pressed():
+	get_tree().reload_current_scene()
+	
+func _on_exit_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/menu_1.tscn\")
+"
+
+[node name="Pause" type="MarginContainer"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_xiht1")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+texture_filter = 3
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+size_flags_stretch_ratio = 1.21
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = -8
+theme_override_font_sizes/font_size = 45
+text = "Pause"
+uppercase = true
+
+[node name="Resume" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 40
+text = "Continue"
+expand_icon = true
+
+[node name="Retry" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "Retry"
+expand_icon = true
+
+[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 43
+keep_pressed_outside = true
+text = "Exit"
+expand_icon = true

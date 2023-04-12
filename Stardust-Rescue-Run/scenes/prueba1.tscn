@@ -1,9 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bvwktk50c7s4u"]
+[gd_scene load_steps=16 format=3 uid="uid://bvwktk50c7s4u"]
 
-[ext_resource type="Script" path="res://AttemptingGravity.gd" id="1_4esra"]
-[ext_resource type="Texture2D" uid="uid://ohol0st4lhck" path="res://icon.svg" id="1_iivsi"]
-[ext_resource type="Script" path="res://SpaceshipTest.gd" id="1_llk7r"]
-[ext_resource type="Script" path="res://RBmove.gd" id="4_ww3j6"]
+[ext_resource type="Script" path="res://AttemptingGravity.gd" id="1_kyrel"]
+[ext_resource type="Script" path="res://SpaceshipTest.gd" id="2_iynt1"]
+[ext_resource type="Texture2D" uid="uid://ohol0st4lhck" path="res://icon.svg" id="3_fjtux"]
+[ext_resource type="PackedScene" uid="uid://djaoi8pchd0qq" path="res://scenes/pause.tscn" id="4_l0xnm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
 radius = 389.329
@@ -16,6 +16,37 @@ radius = 189.13
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hccj3"]
 radius = 63.0714
+
+[sub_resource type="GDScript" id="GDScript_xiht1"]
+script/source = "#extends RigidBody2D
+extends MarginContainer
+@onready var resume = %Resume
+@onready var retry = %Retry
+@onready var exit = %Exit
+
+#hgahah
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	resume.pressed.connect(_on_resume_pressed)
+	retry.pressed.connect(_on_retry_pressed)
+	exit.pressed.connect(_on_exit_pressed)
+	hide()
+	
+func _input(event):
+	if event.is_action_pressed(\"pausa\"):
+		show()
+		get_tree().paused = true
+
+func _on_resume_pressed():
+	hide()
+	get_tree().paused = false
+	
+func _on_retry_pressed():
+	get_tree().reload_current_scene()
+	
+func _on_exit_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/menu_1.tscn\")
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sqstc"]
 radius = 66.4172
@@ -46,7 +77,7 @@ gravity_point = true
 gravity = 1000.0
 linear_damp_space_override = 2
 angular_damp_space_override = 2
-script = ExtResource("1_4esra")
+script = ExtResource("1_kyrel")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="Planeta1"]
@@ -63,7 +94,7 @@ shape = SubResource("CircleShape2D_y84yg")
 position = Vector2(2867, 99)
 collision_layer = 3
 motion_mode = 1
-script = ExtResource("1_llk7r")
+script = ExtResource("2_iynt1")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -71,19 +102,19 @@ shape = SubResource("CircleShape2D_hccj3")
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -6)
-texture = ExtResource("1_iivsi")
+texture = ExtResource("3_fjtux")
 
 [node name="SPACESHIP" type="RigidBody2D" parent="."]
-position = Vector2(493, 202)
+position = Vector2(494, 273)
 mass = 0.5
 gravity_scale = 0.7
 lock_rotation = true
-script = ExtResource("4_ww3j6")
+script = SubResource("GDScript_xiht1")
 metadata/_edit_group_ = true
 
 [node name="Icon" type="Sprite2D" parent="SPACESHIP"]
 position = Vector2(-2, -1)
-texture = ExtResource("1_iivsi")
+texture = ExtResource("3_fjtux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP"]
 position = Vector2(-2.5, -1)
@@ -96,6 +127,8 @@ zoom = Vector2(0.7, 0.7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP/Area2D"]
 shape = SubResource("CircleShape2D_iy8kw")
+
+[node name="Pause" parent="SPACESHIP" instance=ExtResource("4_l0xnm")]
 
 [node name="Planeta2" type="Area2D" parent="."]
 position = Vector2(1014, 173)
