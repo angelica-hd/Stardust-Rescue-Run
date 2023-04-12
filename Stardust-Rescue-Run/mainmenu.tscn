@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcpicvudsbhvw"]
+
+[ext_resource type="Theme" uid="uid://b8bbj1lr141rv" path="res://resources/new_theme.tres" id="1_2dq76"]
+[ext_resource type="Script" path="res://mainmenu.gd" id="2_xjc8o"]
+
+[node name="Mainmenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2dq76")
+script = ExtResource("2_xjc8o")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 19
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_2dq76")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = -4
+theme_override_constants/shadow_outline_size = 7
+theme_override_constants/line_spacing = 5
+theme_override_font_sizes/font_size = 64
+text = "STARDUST"
+
+[node name="start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Exit"

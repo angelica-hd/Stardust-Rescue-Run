@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Stardust: Rescue Run"
-run/main_scene="res://prueba1.tscn"
+run/main_scene="res://mainmenu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
