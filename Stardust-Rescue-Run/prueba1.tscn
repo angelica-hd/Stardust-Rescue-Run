@@ -90,7 +90,7 @@ position = Vector2(-2.5, -1)
 shape = SubResource("CircleShape2D_sqstc")
 
 [node name="Camera2D" type="Camera2D" parent="SPACESHIP"]
-zoom = Vector2(0.7, 0.7)
+zoom = Vector2(0.5, 0.5)
 
 [node name="Area2D" type="Area2D" parent="SPACESHIP"]
 
