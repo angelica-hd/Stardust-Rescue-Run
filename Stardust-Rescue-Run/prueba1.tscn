@@ -19,6 +19,21 @@ friction = 0.3
 [sub_resource type="CircleShape2D" id="CircleShape2D_y84yg"]
 radius = 189.13
 
+[sub_resource type="Animation" id="Animation_6lfcw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/Tierra:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_hux56"]
 resource_name = "tierra"
 length = 10.0
@@ -35,21 +50,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-
-[sub_resource type="Animation" id="Animation_6lfcw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Tierra:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3c6wa"]
@@ -76,6 +76,21 @@ friction = 0.3
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwdt7"]
 radius = 94.0479
 
+[sub_resource type="Animation" id="Animation_17wvj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/Marte:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_kx1f5"]
 resource_name = "marte"
 length = 10.0
@@ -94,21 +109,6 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 
-[sub_resource type="Animation" id="Animation_17wvj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Marte:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_grpbn"]
 _data = {
 "RESET": SubResource("Animation_17wvj"),
@@ -117,6 +117,21 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lihb6"]
 radius = 315.729
+
+[sub_resource type="Animation" id="Animation_0q625"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/Frio:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_518b4"]
 resource_name = "frio"
@@ -134,21 +149,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-
-[sub_resource type="Animation" id="Animation_0q625"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Frio:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qsouc"]
