@@ -1,14 +1,17 @@
-[gd_scene load_steps=30 format=3 uid="uid://bvwktk50c7s4u"]
+[gd_scene load_steps=36 format=3 uid="uid://bvwktk50c7s4u"]
 
 [ext_resource type="Script" path="res://AttemptingGravity.gd" id="1_4esra"]
 [ext_resource type="Texture2D" uid="uid://ohol0st4lhck" path="res://icon.svg" id="1_iivsi"]
 [ext_resource type="Script" path="res://SpaceshipTest.gd" id="1_llk7r"]
+[ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_w787p"]
 [ext_resource type="Texture2D" uid="uid://786bbh1mnfjd" path="res://assets/Planetas/tierra.png" id="2_roh3g"]
 [ext_resource type="Script" path="res://RBmove.gd" id="4_ww3j6"]
 [ext_resource type="Script" path="res://Planeta2.gd" id="6_cmh78"]
 [ext_resource type="PackedScene" uid="uid://bo2ho1u170b4u" path="res://pause_menu.tscn" id="6_iaii2"]
 [ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="7_1fn0k"]
+[ext_resource type="Texture2D" uid="uid://5bq6r7mfdyqt" path="res://assets/Naves/Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png" id="7_w2c4c"]
 [ext_resource type="Script" path="res://Planeta3.gd" id="8_813o1"]
+[ext_resource type="Texture2D" uid="uid://dlv0bjwljb2pc" path="res://assets/Naves/Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png" id="8_dcabm"]
 [ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="9_yuyoi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
@@ -61,12 +64,6 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hccj3"]
 radius = 63.0714
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_sqstc"]
-radius = 66.4172
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_iy8kw"]
-radius = 79.0253
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0eup5"]
 radius = 232.174
@@ -158,7 +155,60 @@ _data = {
 "frio": SubResource("Animation_518b4")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06yi8"]
+radius = 42.5
+height = 115.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iy8kw"]
+radius = 79.0253
+
+[sub_resource type="Animation" id="Animation_trnf4"]
+resource_name = "fueguito"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boosters(16X16):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_iqv1c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boosters(16X16):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pdseo"]
+_data = {
+"RESET": SubResource("Animation_iqv1c"),
+"fueguito": SubResource("Animation_trnf4")
+}
+
 [node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1368.0
+offset_top = -1330.0
+offset_right = 2692.0
+offset_bottom = 2411.0
+texture = ExtResource("1_w787p")
+metadata/_edit_lock_ = true
 
 [node name="Planeta1" type="Area2D" parent="."]
 position = Vector2(318, 737)
@@ -207,34 +257,6 @@ shape = SubResource("CircleShape2D_hccj3")
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -6)
 texture = ExtResource("1_iivsi")
-
-[node name="SPACESHIP" type="RigidBody2D" parent="."]
-position = Vector2(493, 202)
-mass = 0.5
-gravity_scale = 0.7
-lock_rotation = true
-script = ExtResource("4_ww3j6")
-metadata/_edit_group_ = true
-
-[node name="Icon" type="Sprite2D" parent="SPACESHIP"]
-position = Vector2(-2, -1)
-texture = ExtResource("1_iivsi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP"]
-position = Vector2(-2.5, -1)
-shape = SubResource("CircleShape2D_sqstc")
-
-[node name="Camera2D" type="Camera2D" parent="SPACESHIP"]
-zoom = Vector2(0.5, 0.5)
-
-[node name="Area2D" type="Area2D" parent="SPACESHIP"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP/Area2D"]
-shape = SubResource("CircleShape2D_iy8kw")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="SPACESHIP"]
-
-[node name="PauseMenu" parent="SPACESHIP/CanvasLayer" instance=ExtResource("6_iaii2")]
 
 [node name="Planeta2" type="Area2D" parent="."]
 position = Vector2(1014, 173)
@@ -291,4 +313,51 @@ shape = SubResource("CircleShape2D_mwdt7")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Planeta3"]
 libraries = {
 "": SubResource("AnimationLibrary_qsouc")
+}
+
+[node name="SPACESHIP" type="RigidBody2D" parent="."]
+position = Vector2(496, 206)
+mass = 0.5
+gravity_scale = 0.7
+lock_rotation = true
+script = ExtResource("4_ww3j6")
+metadata/_edit_group_ = true
+
+[node name="Boosters(16X16)" type="Sprite2D" parent="SPACESHIP"]
+position = Vector2(-127, 0)
+rotation = 1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("7_w2c4c")
+hframes = 2
+
+[node name="PlayerShip(16X16)" type="Sprite2D" parent="SPACESHIP"]
+rotation = 1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("8_dcabm")
+hframes = 3
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP"]
+visible = false
+position = Vector2(-2.5, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_06yi8")
+
+[node name="Camera2D" type="Camera2D" parent="SPACESHIP"]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Area2D" type="Area2D" parent="SPACESHIP"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP/Area2D"]
+shape = SubResource("CircleShape2D_iy8kw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SPACESHIP"]
+visible = false
+
+[node name="PauseMenu" parent="SPACESHIP/CanvasLayer" instance=ExtResource("6_iaii2")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SPACESHIP"]
+libraries = {
+"": SubResource("AnimationLibrary_pdseo")
 }
