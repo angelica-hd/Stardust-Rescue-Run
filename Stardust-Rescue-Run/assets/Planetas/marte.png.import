@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://786bbh1mnfjd"
-path="res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"
+uid="uid://cgw0tcj6vi11l"
+path="res://.godot/imported/marte.png-b6ba14ac8ccf05b858fb674fd8253c91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Planetas/tierra.png"
-dest_files=["res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"]
+source_file="res://assets/Planetas/marte.png"
+dest_files=["res://.godot/imported/marte.png-b6ba14ac8ccf05b858fb674fd8253c91.ctex"]
 
 [params]
 

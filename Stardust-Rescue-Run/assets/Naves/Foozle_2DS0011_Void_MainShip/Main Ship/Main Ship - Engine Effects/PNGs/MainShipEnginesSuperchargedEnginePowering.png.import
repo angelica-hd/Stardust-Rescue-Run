@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://786bbh1mnfjd"
-path="res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"
+uid="uid://4jhs0v8j2dch"
+path="res://.godot/imported/MainShipEnginesSuperchargedEnginePowering.png-4a85d66ec1f9b8ec49b16361ef596c49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Planetas/tierra.png"
-dest_files=["res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"]
+source_file="res://assets/Naves/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engine Effects/PNGs/MainShipEnginesSuperchargedEnginePowering.png"
+dest_files=["res://.godot/imported/MainShipEnginesSuperchargedEnginePowering.png-4a85d66ec1f9b8ec49b16361ef596c49.ctex"]
 
 [params]
 

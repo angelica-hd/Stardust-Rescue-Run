@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://786bbh1mnfjd"
-path="res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"
+uid="uid://x5mjum71yweh"
+path="res://.godot/imported/Main Ship-BaseFullhealth.png-4a5ec21da982ab3a496e9070fd1ba25c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Planetas/tierra.png"
-dest_files=["res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"]
+source_file="res://assets/Naves/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/PNGs/Main Ship-BaseFullhealth.png"
+dest_files=["res://.godot/imported/Main Ship-BaseFullhealth.png-4a5ec21da982ab3a496e9070fd1ba25c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://786bbh1mnfjd"
-path="res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"
+uid="uid://cigpc3yawloq0"
+path="res://.godot/imported/MainShip-Engines-BigPulseEngine.png-64e19a63eb634e6ab76bc23b2bba305f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Planetas/tierra.png"
-dest_files=["res://.godot/imported/tierra.png-9e28e3cb0abaacea06bf8ec16f7cad1d.ctex"]
+source_file="res://assets/Naves/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engines/PNGs/MainShip-Engines-BigPulseEngine.png"
+dest_files=["res://.godot/imported/MainShip-Engines-BigPulseEngine.png-64e19a63eb634e6ab76bc23b2bba305f.ctex"]
 
 [params]
 
