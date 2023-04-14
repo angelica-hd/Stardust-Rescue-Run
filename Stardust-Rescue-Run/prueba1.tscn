@@ -194,6 +194,7 @@ libraries = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(2867, 99)
 collision_layer = 3
 motion_mode = 1
