@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://786bbh1mnfjd" path="res://assets/Planetas/tierra.png" id="2_roh3g"]
 [ext_resource type="Script" path="res://RBmove.gd" id="4_ww3j6"]
 [ext_resource type="Script" path="res://Planeta2.gd" id="6_cmh78"]
-[ext_resource type="PackedScene" uid="uid://bo2ho1u170b4u" path="res://pause_menu.tscn" id="6_iaii2"]
-[ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="7_1fn0k"]
+[ext_resource type="PackedScene" path="res://pause_menu.tscn" id="6_iaii2"]
+[ext_resource type="Texture2D" path="res://assets/Planetas/marte.png" id="7_1fn0k"]
 [ext_resource type="Script" path="res://Planeta3.gd" id="8_813o1"]
-[ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="9_yuyoi"]
+[ext_resource type="Texture2D" path="res://assets/Planetas/frio.png" id="9_yuyoi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
 radius = 389.329
