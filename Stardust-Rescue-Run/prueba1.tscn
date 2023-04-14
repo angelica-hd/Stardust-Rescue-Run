@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bvwktk50c7s4u"]
+[gd_scene load_steps=30 format=3 uid="uid://bvwktk50c7s4u"]
 
 [ext_resource type="Script" path="res://AttemptingGravity.gd" id="1_4esra"]
 [ext_resource type="Texture2D" uid="uid://ohol0st4lhck" path="res://icon.svg" id="1_iivsi"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://786bbh1mnfjd" path="res://assets/Planetas/tierra.png" id="2_roh3g"]
 [ext_resource type="Script" path="res://RBmove.gd" id="4_ww3j6"]
 [ext_resource type="Script" path="res://Planeta2.gd" id="6_cmh78"]
+[ext_resource type="PackedScene" uid="uid://bo2ho1u170b4u" path="res://pause_menu.tscn" id="6_iaii2"]
 [ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="7_1fn0k"]
 [ext_resource type="Script" path="res://Planeta3.gd" id="8_813o1"]
 [ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="9_yuyoi"]
@@ -229,6 +230,10 @@ zoom = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SPACESHIP/Area2D"]
 shape = SubResource("CircleShape2D_iy8kw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SPACESHIP"]
+
+[node name="PauseMenu" parent="SPACESHIP/CanvasLayer" instance=ExtResource("6_iaii2")]
 
 [node name="Planeta2" type="Area2D" parent="."]
 position = Vector2(1014, 173)
