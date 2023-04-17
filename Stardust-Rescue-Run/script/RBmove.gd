@@ -1,6 +1,8 @@
 extends RigidBody2D
 
+var monitos = 0;
 @onready var animation_player = $AnimationPlayer
+@onready var atrapar = $Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,10 +15,6 @@ func _ready():
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
 	
-	# if Input.is_action_just_pressed("ui_accept"):
-	# 	for body in $Area2D.get_overlapping_bodies():
-	# 		if body != $SPACESHIP:
-	# 			body.hide()
 
 func move():
 	if Input.is_action_pressed('ui_right'):
@@ -31,3 +29,12 @@ func move():
 	if Input.is_action_pressed('ui_down'):
 		apply_central_impulse(Vector2(0, 4))
 
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		for body in atrapar.get_overlapping_bodies():
+			entro_monito(body)
+
+func entro_monito(body):
+	body.queue_free()
+	monitos += 1
+	pass # Replace with function body.

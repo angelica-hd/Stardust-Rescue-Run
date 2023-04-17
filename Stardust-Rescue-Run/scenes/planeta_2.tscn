@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://cokxsvirw3fho"]
+
+[ext_resource type="Script" path="res://script/Planeta2.gd" id="1_4e28l"]
+[ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="2_beusd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0eup5"]
+radius = 232.174
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
+friction = 0.3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwdt7"]
+radius = 94.0479
+
+[sub_resource type="Animation" id="Animation_17wvj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/Marte:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_kx1f5"]
+resource_name = "marte"
+length = 10.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/Marte:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_grpbn"]
+_data = {
+"RESET": SubResource("Animation_17wvj"),
+"marte": SubResource("Animation_kx1f5")
+}
+
+[node name="Planeta2" type="Area2D"]
+position = Vector2(1014, 173)
+gravity_space_override = 1
+gravity_point = true
+gravity = 500.0
+angular_damp = 20.0
+script = ExtResource("1_4e28l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0eup5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_kfr1h")
+
+[node name="Marte" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("2_beusd")
+hframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+shape = SubResource("CircleShape2D_mwdt7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_grpbn")
+}
