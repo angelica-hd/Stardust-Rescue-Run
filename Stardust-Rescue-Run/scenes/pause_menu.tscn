@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cj2y1u0x8g3f"]
+[gd_scene load_steps=4 format=3 uid="uid://cj2y1u0x8g3f"]
 
 [ext_resource type="Script" path="res://script/pause_menu.gd" id="1_3d514"]
 [ext_resource type="Theme" uid="uid://b8bbj1lr141rv" path="res://resources/new_theme.tres" id="1_j515a"]
+[ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_7vjpt"]
 
 [node name="PauseMenu" type="MarginContainer"]
 process_mode = 3
@@ -30,28 +31,33 @@ theme_override_constants/separation = 22
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme = ExtResource("1_j515a")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = -4
 theme_override_constants/shadow_outline_size = 7
 theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_7vjpt")
 theme_override_font_sizes/font_size = 64
 text = "Pause"
 
 [node name="sigue" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7vjpt")
 theme_override_font_sizes/font_size = 30
 text = "Continue"
 
 [node name="retry" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7vjpt")
 theme_override_font_sizes/font_size = 30
 text = "Retry"
 
 [node name="exit2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7vjpt")
 theme_override_font_sizes/font_size = 30
 text = "Main Menu"
