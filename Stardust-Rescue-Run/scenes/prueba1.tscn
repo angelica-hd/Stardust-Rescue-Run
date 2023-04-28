@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dwi3inwjs705s"]
+[gd_scene load_steps=29 format=3 uid="uid://dwi3inwjs705s"]
 
 [ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_jp68k"]
 [ext_resource type="Script" path="res://script/AttemptingGravity.gd" id="2_u2j77"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://script/Planeta2.gd" id="6_016yq"]
 [ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="7_4kbdq"]
 [ext_resource type="Script" path="res://script/Planeta3.gd" id="8_5u4sh"]
+[ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="8_b5ldj"]
 [ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="9_o5vm2"]
 [ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="10_eo8l6"]
 [ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="11_idgnv"]
@@ -273,9 +274,11 @@ position = Vector2(248, 937)
 [node name="monito2" parent="." instance=ExtResource("11_idgnv")]
 position = Vector2(-1164, 172)
 
+[node name="Blast" parent="." instance=ExtResource("8_b5ldj")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1000, -1000)
-zoom = Vector2(0.7, 0.7)
+zoom = Vector2(0.8, 0.8)
 limit_left = -1800
 limit_top = -1800
 limit_right = 1800

@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$CollisionShape2D.shape.radius += 0.2
+	$CollisionShape2D.shape.radius += 0.5
 
 func _input(event):
 	#for body in area.get_overlapping_bodies():
