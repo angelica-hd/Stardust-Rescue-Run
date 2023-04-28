@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://nctjjgvjl71w"]
+
+[ext_resource type="Script" path="res://Blast.gd" id="1_khl5i"]
+[ext_resource type="Texture2D" uid="uid://ohol0st4lhck" path="res://icon.svg" id="2_t8rxb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0x1ok"]
+radius = 33.8378
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqbh8"]
+radius = 27.4591
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Blast" type="Area2D" parent="."]
+position = Vector2(544, 324)
+script = ExtResource("1_khl5i")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blast"]
+shape = SubResource("CircleShape2D_0x1ok")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(469, 270)
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="RigidBody2D"]
+visible = false
+position = Vector2(0, -1)
+scale = Vector2(0.398438, 0.40625)
+texture = ExtResource("2_t8rxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_lqbh8")
+
+[connection signal="body_entered" from="Blast" to="Blast" method="_on_body_entered"]
