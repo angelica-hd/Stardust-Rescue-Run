@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmc1onxivc4qk"]
+[gd_scene load_steps=6 format=3 uid="uid://bmc1onxivc4qk"]
 
 [ext_resource type="Theme" uid="uid://b8bbj1lr141rv" path="res://resources/new_theme.tres" id="1_vb47i"]
 [ext_resource type="Script" path="res://script/mainmenu.gd" id="2_2j1ph"]
 [ext_resource type="Texture2D" uid="uid://duck2rscjnb27" path="res://assets/Fondos/Space2.png" id="3_w0q2r"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="4_0ju60"]
+[ext_resource type="AudioStream" uid="uid://bsh8351qabg7b" path="res://assets/Ost/menus/pause_menu.wav" id="5_kbh2y"]
 
 [node name="Mainmenu" type="MarginContainer"]
 anchors_preset = 15
@@ -65,3 +66,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_0ju60")
 theme_override_font_sizes/font_size = 48
 text = "Exit"
+
+[node name="Menu_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kbh2y")
+autoplay = true
+bus = &"Menu"

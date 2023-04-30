@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djenru307iw20"
+path="res://.godot/imported/alfredofreak - Space Surfin' - 05 Surf Forever.mp3-7aef5ee43a0e488bf1b52b7aa0e57ffb.mp3str"
+
+[deps]
+
+source_file="res://assets/Ost/niveles/alfredofreak - Space Surfin' - 05 Surf Forever.mp3"
+dest_files=["res://.godot/imported/alfredofreak - Space Surfin' - 05 Surf Forever.mp3-7aef5ee43a0e488bf1b52b7aa0e57ffb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

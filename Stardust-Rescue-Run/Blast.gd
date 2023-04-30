@@ -25,4 +25,5 @@ func destroy(body):
 
 func _on_body_entered(body):
 	body.queue_free()
+	get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
 	pass # Replace with function body.
