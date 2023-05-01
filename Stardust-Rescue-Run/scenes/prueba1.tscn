@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dwi3inwjs705s"]
+[gd_scene load_steps=30 format=3 uid="uid://dwi3inwjs705s"]
 
 [ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_jp68k"]
 [ext_resource type="Script" path="res://script/AttemptingGravity.gd" id="2_u2j77"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="8_b5ldj"]
 [ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="9_o5vm2"]
 [ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="10_eo8l6"]
+[ext_resource type="AudioStream" uid="uid://bfluy4a1pnm3" path="res://assets/Ost/niveles/level1.mp3" id="11_7xxlc"]
 [ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="11_idgnv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
@@ -302,3 +303,7 @@ shape = SubResource("RectangleShape2D_gjmh3")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-1917, -1)
 shape = SubResource("RectangleShape2D_drse7")
+
+[node name="level1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_7xxlc")
+autoplay = true
