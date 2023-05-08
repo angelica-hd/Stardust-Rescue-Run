@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var area = $"."
 @onready var animation_player = $"../AnimationPlayer"
+@onready var blast_2 = $"../Blast2"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$CollisionShape2D.shape.radius += 0.5
+	blast_2.scale.x +=0.01
+	blast_2.scale.y +=0.01
 
 func _input(event):
 	#for body in area.get_overlapping_bodies():
