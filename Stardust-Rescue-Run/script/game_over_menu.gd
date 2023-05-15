@@ -2,7 +2,6 @@ extends MarginContainer
 
 @onready var retry = %Retry
 @onready var exit = %exit
-
 	
 func _ready():
 	retry.pressed.connect(_on_retry_pressed)

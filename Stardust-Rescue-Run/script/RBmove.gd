@@ -24,7 +24,7 @@ func _ready():
 
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
-	fueld -= (delta*20)
+	fueld -= (delta*0.5)
 	if fueld < 0:
 		get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
 	
