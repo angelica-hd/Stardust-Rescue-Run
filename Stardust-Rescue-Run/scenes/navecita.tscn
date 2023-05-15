@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://caatglmekpgj2"]
+[gd_scene load_steps=11 format=3 uid="uid://caatglmekpgj2"]
 
 [ext_resource type="Script" path="res://script/RBmove.gd" id="1_iksbf"]
 [ext_resource type="Texture2D" uid="uid://5bq6r7mfdyqt" path="res://assets/Naves/Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png" id="2_42r30"]
 [ext_resource type="Texture2D" uid="uid://dlv0bjwljb2pc" path="res://assets/Naves/Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png" id="3_uf4wj"]
 [ext_resource type="PackedScene" uid="uid://cj2y1u0x8g3f" path="res://scenes/pause_menu.tscn" id="4_i53w4"]
+[ext_resource type="PackedScene" uid="uid://bhx362sppbvcs" path="res://scenes/hp.tscn" id="5_471na"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06yi8"]
 radius = 42.5
@@ -85,6 +86,12 @@ monitorable = false
 shape = SubResource("CircleShape2D_iy8kw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fueld" parent="CanvasLayer" instance=ExtResource("5_471na")]
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 13.0
+offset_bottom = 12.0
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_i53w4")]
 

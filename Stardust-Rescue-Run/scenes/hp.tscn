@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhx362sppbvcs"]
+
+[ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="1_g0mrm"]
+[ext_resource type="Script" path="res://scenes/hp.gd" id="2_mm7fe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oi8i4"]
+bg_color = Color(0.647059, 0.32549, 0.862745, 1)
+
+[sub_resource type="Theme" id="Theme_r4nvm"]
+default_font = ExtResource("1_g0mrm")
+default_font_size = 30
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_oi8i4")
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_r4nvm")
+script = ExtResource("2_mm7fe")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(391, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+value = 100.0
