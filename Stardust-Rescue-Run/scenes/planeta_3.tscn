@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cokxsvirw3fho"]
+[gd_scene load_steps=9 format=3 uid="uid://q16jwji1jxh5"]
 
-[ext_resource type="Script" path="res://script/planeta.gd" id="1_3neqa"]
-[ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="2_beusd"]
+[ext_resource type="Script" path="res://script/planeta.gd" id="1_go4o8"]
+[ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="2_1lql0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
 friction = 0.3
@@ -36,33 +36,34 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwdt7"]
 radius = 94.0479
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0eup5"]
-radius = 232.174
+[sub_resource type="CircleShape2D" id="CircleShape2D_lihb6"]
+radius = 315.729
 
 [node name="StaticBody2D" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_kfr1h")
-script = ExtResource("1_3neqa")
+script = ExtResource("1_go4o8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Planeta2")
+root_node = NodePath("../Planeta3")
 libraries = {
 "": SubResource("AnimationLibrary_grpbn")
 }
 
 [node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
 scale = Vector2(1.9, 1.9)
-texture = ExtResource("2_beusd")
+texture = ExtResource("2_1lql0")
 hframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("CircleShape2D_mwdt7")
 
-[node name="Planeta2" type="Area2D" parent="."]
+[node name="Planeta3" type="Area2D" parent="."]
 gravity_space_override = 1
 gravity_point = true
-gravity = 500.0
+gravity = -1000.0
 angular_damp = 20.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta2"]
-shape = SubResource("CircleShape2D_0eup5")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta3"]
+shape = SubResource("CircleShape2D_lihb6")

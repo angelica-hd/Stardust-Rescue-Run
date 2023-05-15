@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cokxsvirw3fho"]
+[gd_scene load_steps=9 format=3 uid="uid://b6ik1gcwl06mv"]
 
-[ext_resource type="Script" path="res://script/planeta.gd" id="1_3neqa"]
-[ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="2_beusd"]
+[ext_resource type="Script" path="res://script/planeta.gd" id="1_btfva"]
+[ext_resource type="Texture2D" uid="uid://786bbh1mnfjd" path="res://assets/Planetas/tierra.png" id="2_wb5q8"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fmeyo"]
 friction = 0.3
 
 [sub_resource type="Animation" id="Animation_17wvj"]
@@ -33,36 +33,40 @@ _data = {
 "rotación": SubResource("Animation_kx1f5")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mwdt7"]
-radius = 94.0479
+[sub_resource type="CircleShape2D" id="CircleShape2D_y84yg"]
+radius = 189.13
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0eup5"]
-radius = 232.174
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
+radius = 389.329
 
 [node name="StaticBody2D" type="StaticBody2D"]
-physics_material_override = SubResource("PhysicsMaterial_kfr1h")
-script = ExtResource("1_3neqa")
+physics_material_override = SubResource("PhysicsMaterial_fmeyo")
+script = ExtResource("1_btfva")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Planeta2")
+root_node = NodePath("../Planeta1")
 libraries = {
 "": SubResource("AnimationLibrary_grpbn")
 }
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(1.9, 1.9)
-texture = ExtResource("2_beusd")
+position = Vector2(-2, 0)
+scale = Vector2(3.8, 3.8)
+texture = ExtResource("2_wb5q8")
 hframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource("CircleShape2D_mwdt7")
+shape = SubResource("CircleShape2D_y84yg")
 
-[node name="Planeta2" type="Area2D" parent="."]
+[node name="Planeta1" type="Area2D" parent="."]
+collision_layer = 3
+input_pickable = false
 gravity_space_override = 1
 gravity_point = true
-gravity = 500.0
-angular_damp = 20.0
+gravity = 1000.0
+linear_damp_space_override = 2
+angular_damp_space_override = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta2"]
-shape = SubResource("CircleShape2D_0eup5")
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Planeta1"]
+shape = SubResource("CircleShape2D_ylmco")

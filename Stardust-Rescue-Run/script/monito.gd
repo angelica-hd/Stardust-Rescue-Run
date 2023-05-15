@@ -1,3 +1,4 @@
+class_name Monito
 extends RigidBody2D
 
 @export_enum("Juan", "Juana") var tipo_monito : int
