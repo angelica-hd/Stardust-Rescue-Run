@@ -4,6 +4,15 @@ var monitos = 0;
 @onready var animation_player = $AnimationPlayer
 @onready var atrapar = $Area2D
 @onready var pivote = $Node2D
+@onready var Fueld = $CanvasLayer/Fueld
+
+const max_fueld = 100
+var fueld = 100:
+	set(value):
+		fueld = value
+		Fueld.set_fueld(fueld)
+	get:
+		return fueld
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +24,9 @@ func _ready():
 
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
+	fueld -= (delta*0.5)
+	if fueld < 0:
+		get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
 	
 
 func move():
