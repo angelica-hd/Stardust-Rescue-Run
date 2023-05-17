@@ -1,13 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwi3inwjs705s"]
+[gd_scene load_steps=16 format=3 uid="uid://dwi3inwjs705s"]
 
 [ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_jp68k"]
 [ext_resource type="PackedScene" uid="uid://b6ik1gcwl06mv" path="res://scenes/planeta_1.tscn" id="2_efnhu"]
 [ext_resource type="PackedScene" uid="uid://cokxsvirw3fho" path="res://scenes/planeta_2.tscn" id="4_j27e6"]
+[ext_resource type="PackedScene" uid="uid://dgtl31rl4chb0" path="res://scenes/planeta_4.tscn" id="4_pi0fo"]
 [ext_resource type="PackedScene" uid="uid://q16jwji1jxh5" path="res://scenes/planeta_3.tscn" id="5_2pq28"]
+[ext_resource type="PackedScene" uid="uid://cylp7fbaa5flw" path="res://scenes/planeta_5.tscn" id="5_kp823"]
+[ext_resource type="PackedScene" uid="uid://fxfs0cc75lge" path="res://scenes/planeta_6.tscn" id="6_5qs2s"]
 [ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="8_b5ldj"]
 [ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="10_eo8l6"]
 [ext_resource type="AudioStream" uid="uid://bfluy4a1pnm3" path="res://assets/Ost/niveles/level1.mp3" id="11_7xxlc"]
 [ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="11_idgnv"]
+[ext_resource type="PackedScene" uid="uid://6kgvire6s6go" path="res://scenes/monito2.tscn" id="12_lx8um"]
+[ext_resource type="PackedScene" uid="uid://vkaj2nfgje5j" path="res://scenes/monito3.tscn" id="13_rfnxn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drse7"]
 size = Vector2(227, 4006)
@@ -34,13 +39,22 @@ texture = ExtResource("1_jp68k")
 metadata/_edit_lock_ = true
 
 [node name="Planeta1" parent="." instance=ExtResource("2_efnhu")]
-position = Vector2(968, 92)
+position = Vector2(1114, 748)
 
 [node name="Planeta3" parent="." instance=ExtResource("5_2pq28")]
-position = Vector2(76, 956)
+position = Vector2(-1302, -1327)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("4_j27e6")]
-position = Vector2(-988, 180)
+[node name="Planeta4" parent="." instance=ExtResource("4_pi0fo")]
+position = Vector2(71, -663)
+
+[node name="Planeta5" parent="." instance=ExtResource("5_kp823")]
+position = Vector2(1270, -1314)
+
+[node name="Planeta6" parent="." instance=ExtResource("6_5qs2s")]
+position = Vector2(-527, 1163)
+
+[node name="Planeta2" parent="." instance=ExtResource("4_j27e6")]
+position = Vector2(-1128, 28)
 
 [node name="SPACESHIP" parent="." instance=ExtResource("10_eo8l6")]
 position = Vector2(-1000, -1000)
@@ -49,10 +63,7 @@ position = Vector2(-1000, -1000)
 remote_path = NodePath("../../Camera2D")
 
 [node name="monito" parent="." instance=ExtResource("11_idgnv")]
-position = Vector2(1244, 81)
-
-[node name="monito2" parent="." instance=ExtResource("11_idgnv")]
-position = Vector2(-1164, 172)
+position = Vector2(72, -852)
 
 [node name="Blast" parent="." instance=ExtResource("8_b5ldj")]
 
@@ -86,3 +97,10 @@ shape = SubResource("RectangleShape2D_drse7")
 [node name="level1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7xxlc")
 autoplay = true
+
+[node name="monito2" parent="." instance=ExtResource("12_lx8um")]
+position = Vector2(-1131, -108)
+
+[node name="monito3" parent="." instance=ExtResource("13_rfnxn")]
+position = Vector2(-1477, -1328)
+rotation = -1.5708

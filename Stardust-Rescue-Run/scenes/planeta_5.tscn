@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://q16jwji1jxh5"]
+[gd_scene load_steps=9 format=3 uid="uid://cylp7fbaa5flw"]
 
-[ext_resource type="Script" path="res://script/planeta.gd" id="1_go4o8"]
-[ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="2_1lql0"]
+[ext_resource type="Script" path="res://script/planeta.gd" id="1_unwto"]
+[ext_resource type="Texture2D" uid="uid://biphr0gugimgo" path="res://assets/Planetas/lava.png" id="2_tr3ko"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
 friction = 0.3
@@ -37,16 +37,16 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwdt7"]
-radius = 116.108
+radius = 79.0569
 
 [node name="StaticBody2D" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_kfr1h")
-script = ExtResource("1_go4o8")
+script = ExtResource("1_unwto")
 
 [node name="Planeta3" type="Area2D" parent="."]
 gravity_space_override = 1
 gravity_point = true
-gravity = 1000.0
+gravity = -1000.0
 angular_damp = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta3"]
@@ -60,10 +60,12 @@ libraries = {
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -2)
-scale = Vector2(2.4, 2.4)
-texture = ExtResource("2_1lql0")
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("2_tr3ko")
 hframes = 10
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_mwdt7")

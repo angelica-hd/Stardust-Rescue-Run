@@ -6,6 +6,9 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fmeyo"]
 friction = 0.3
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
+radius = 389.329
+
 [sub_resource type="Animation" id="Animation_17wvj"]
 length = 0.001
 
@@ -36,12 +39,21 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_y84yg"]
 radius = 189.13
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
-radius = 389.329
-
 [node name="StaticBody2D" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_fmeyo")
 script = ExtResource("1_btfva")
+
+[node name="Planeta1" type="Area2D" parent="."]
+collision_layer = 3
+input_pickable = false
+gravity_space_override = 1
+gravity_point = true
+gravity = 1000.0
+linear_damp_space_override = 2
+angular_damp_space_override = 2
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Planeta1"]
+shape = SubResource("CircleShape2D_ylmco")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Planeta1")
@@ -58,15 +70,3 @@ hframes = 10
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("CircleShape2D_y84yg")
-
-[node name="Planeta1" type="Area2D" parent="."]
-collision_layer = 3
-input_pickable = false
-gravity_space_override = 1
-gravity_point = true
-gravity = 1000.0
-linear_damp_space_override = 2
-angular_damp_space_override = 2
-
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="Planeta1"]
-shape = SubResource("CircleShape2D_ylmco")
