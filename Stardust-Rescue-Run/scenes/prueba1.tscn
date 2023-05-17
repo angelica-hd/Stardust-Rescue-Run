@@ -1,154 +1,13 @@
-[gd_scene load_steps=30 format=3 uid="uid://dwi3inwjs705s"]
+[gd_scene load_steps=11 format=3 uid="uid://dwi3inwjs705s"]
 
 [ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_jp68k"]
-[ext_resource type="Script" path="res://script/AttemptingGravity.gd" id="2_u2j77"]
-[ext_resource type="Texture2D" uid="uid://786bbh1mnfjd" path="res://assets/Planetas/tierra.png" id="3_qor5v"]
-[ext_resource type="Script" path="res://script/Planeta2.gd" id="6_016yq"]
-[ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="7_4kbdq"]
-[ext_resource type="Script" path="res://script/Planeta3.gd" id="8_5u4sh"]
+[ext_resource type="PackedScene" uid="uid://b6ik1gcwl06mv" path="res://scenes/planeta_1.tscn" id="2_efnhu"]
+[ext_resource type="PackedScene" uid="uid://cokxsvirw3fho" path="res://scenes/planeta_2.tscn" id="4_j27e6"]
+[ext_resource type="PackedScene" uid="uid://q16jwji1jxh5" path="res://scenes/planeta_3.tscn" id="5_2pq28"]
 [ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="8_b5ldj"]
-[ext_resource type="Texture2D" uid="uid://b1ywsr7lqmkhw" path="res://assets/Planetas/frio.png" id="9_o5vm2"]
 [ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="10_eo8l6"]
 [ext_resource type="AudioStream" uid="uid://bfluy4a1pnm3" path="res://assets/Ost/niveles/level1.mp3" id="11_7xxlc"]
 [ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="11_idgnv"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ylmco"]
-radius = 389.329
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fmeyo"]
-friction = 0.3
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_y84yg"]
-radius = 189.13
-
-[sub_resource type="Animation" id="Animation_6lfcw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Tierra:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_hux56"]
-resource_name = "tierra"
-length = 10.0
-loop_mode = 1
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Tierra:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3c6wa"]
-_data = {
-"RESET": SubResource("Animation_6lfcw"),
-"tierra": SubResource("Animation_hux56")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_0eup5"]
-radius = 232.174
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
-friction = 0.3
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_mwdt7"]
-radius = 94.0479
-
-[sub_resource type="Animation" id="Animation_17wvj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Marte:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_kx1f5"]
-resource_name = "marte"
-length = 10.0
-loop_mode = 1
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Marte:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_grpbn"]
-_data = {
-"RESET": SubResource("Animation_17wvj"),
-"marte": SubResource("Animation_kx1f5")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_lihb6"]
-radius = 315.729
-
-[sub_resource type="Animation" id="Animation_0q625"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Frio:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_518b4"]
-resource_name = "frio"
-length = 10.0
-loop_mode = 1
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D/Frio:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsouc"]
-_data = {
-"RESET": SubResource("Animation_0q625"),
-"frio": SubResource("Animation_518b4")
-}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drse7"]
 size = Vector2(227, 4006)
@@ -174,94 +33,14 @@ grow_vertical = 2
 texture = ExtResource("1_jp68k")
 metadata/_edit_lock_ = true
 
-[node name="Planeta1" type="Area2D" parent="."]
-position = Vector2(-7, 944)
-collision_layer = 3
-input_pickable = false
-gravity_space_override = 1
-gravity_point = true
-gravity = 1000.0
-linear_damp_space_override = 2
-angular_damp_space_override = 2
-script = ExtResource("2_u2j77")
+[node name="Planeta1" parent="." instance=ExtResource("2_efnhu")]
+position = Vector2(968, 92)
 
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="Planeta1"]
-shape = SubResource("CircleShape2D_ylmco")
+[node name="Planeta3" parent="." instance=ExtResource("5_2pq28")]
+position = Vector2(76, 956)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Planeta1"]
-physics_material_override = SubResource("PhysicsMaterial_fmeyo")
-
-[node name="Tierra" type="Sprite2D" parent="Planeta1/StaticBody2D"]
-position = Vector2(-2, 0)
-scale = Vector2(3.8, 3.8)
-texture = ExtResource("3_qor5v")
-hframes = 10
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta1/StaticBody2D"]
-visible = false
-shape = SubResource("CircleShape2D_y84yg")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Planeta1"]
-libraries = {
-"": SubResource("AnimationLibrary_3c6wa")
-}
-
-[node name="Planeta2" type="Area2D" parent="."]
-position = Vector2(-1000, 173)
-gravity_space_override = 1
-gravity_point = true
-gravity = 500.0
-angular_damp = 20.0
-script = ExtResource("6_016yq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta2"]
-shape = SubResource("CircleShape2D_0eup5")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Planeta2"]
-physics_material_override = SubResource("PhysicsMaterial_kfr1h")
-
-[node name="Marte" type="Sprite2D" parent="Planeta2/StaticBody2D"]
-scale = Vector2(1.9, 1.9)
-texture = ExtResource("7_4kbdq")
-hframes = 10
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta2/StaticBody2D"]
-visible = false
-shape = SubResource("CircleShape2D_mwdt7")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Planeta2"]
-libraries = {
-"": SubResource("AnimationLibrary_grpbn")
-}
-
-[node name="Planeta3" type="Area2D" parent="."]
-position = Vector2(853, -399)
-gravity_space_override = 1
-gravity_point = true
-gravity = -1000.0
-angular_damp = 20.0
-script = ExtResource("8_5u4sh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta3"]
-shape = SubResource("CircleShape2D_lihb6")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Planeta3"]
-physics_material_override = SubResource("PhysicsMaterial_kfr1h")
-
-[node name="Frio" type="Sprite2D" parent="Planeta3/StaticBody2D"]
-position = Vector2(0, -2)
-scale = Vector2(1.9, 1.9)
-texture = ExtResource("9_o5vm2")
-hframes = 10
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planeta3/StaticBody2D"]
-visible = false
-shape = SubResource("CircleShape2D_mwdt7")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Planeta3"]
-libraries = {
-"": SubResource("AnimationLibrary_qsouc")
-}
+[node name="StaticBody2D2" parent="." instance=ExtResource("4_j27e6")]
+position = Vector2(-988, 180)
 
 [node name="SPACESHIP" parent="." instance=ExtResource("10_eo8l6")]
 position = Vector2(-1000, -1000)
@@ -270,7 +49,7 @@ position = Vector2(-1000, -1000)
 remote_path = NodePath("../../Camera2D")
 
 [node name="monito" parent="." instance=ExtResource("11_idgnv")]
-position = Vector2(248, 937)
+position = Vector2(1244, 81)
 
 [node name="monito2" parent="." instance=ExtResource("11_idgnv")]
 position = Vector2(-1164, 172)

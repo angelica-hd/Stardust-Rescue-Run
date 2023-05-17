@@ -1,3 +1,4 @@
+class_name SpaceShip
 extends RigidBody2D
 
 var monitos = 0;
@@ -59,3 +60,5 @@ func entro_monito(body):
 	body.queue_free()
 	monitos += 1
 	pass # Replace with function body.
+	
+

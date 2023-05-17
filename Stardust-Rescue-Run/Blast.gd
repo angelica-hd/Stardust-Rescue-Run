@@ -3,6 +3,8 @@ extends Area2D
 @onready var area = $"."
 @onready var animation_player = $"../AnimationPlayer"
 @onready var blast_2 = $"../Blast2"
+#@onready var nave = $"RBmove"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,5 +30,6 @@ func destroy(body):
 
 func _on_body_entered(body):
 	body.queue_free()
-	get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
-	pass # Replace with function body.
+	if (body is SpaceShip) or (body is Monito):
+		get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
+	#pass # Replace with function body.
