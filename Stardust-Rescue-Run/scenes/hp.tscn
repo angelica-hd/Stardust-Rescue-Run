@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhx362sppbvcs"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="1_g0mrm"]
-[ext_resource type="Script" path="res://scenes/hp.gd" id="2_mm7fe"]
+[ext_resource type="Script" path="res://script/hp.gd" id="2_mm7fe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oi8i4"]
 bg_color = Color(0.647059, 0.32549, 0.862745, 1)

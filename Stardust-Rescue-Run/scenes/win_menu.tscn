@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl3pnxch18v30"]
+
+[ext_resource type="Script" path="res://scenes/win_menu.gd" id="1_lq0d3"]
+[ext_resource type="Texture2D" uid="uid://duck2rscjnb27" path="res://assets/Fondos/Space2.png" id="2_5ygmf"]
+[ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_5nm2g"]
+[ext_resource type="AudioStream" uid="uid://dbnci1u6juwba" path="res://assets/Ost/menus/complete1.mp3" id="4_kjn7d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ab3k7"]
+line_spacing = 7.0
+font_size = 182
+
+[node name="Win" type="MarginContainer"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lq0d3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_5ygmf")
+stretch_mode = 6
+
+[node name="PanelContainer" type="PanelContainer" parent="TextureRect"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 60.0
+offset_right = 102.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 19
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 11
+
+[node name="Next" type="Button" parent="TextureRect/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5nm2g")
+theme_override_font_sizes/font_size = 55
+text = "Next"
+
+[node name="Retry" type="Button" parent="TextureRect/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5nm2g")
+theme_override_font_sizes/font_size = 55
+text = "Retry"
+
+[node name="exit" type="Button" parent="TextureRect/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5nm2g")
+theme_override_font_sizes/font_size = 55
+text = "Exit"
+
+[node name="PanelContainer2" type="PanelContainer" parent="TextureRect"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 75.0
+offset_top = 172.0
+offset_right = 1084.0
+offset_bottom = 336.0
+
+[node name="Label" type="Label" parent="TextureRect/PanelContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5nm2g")
+text = "You Win"
+label_settings = SubResource("LabelSettings_ab3k7")
+horizontal_alignment = 1
+
+[node name="win1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kjn7d")
+volume_db = -0.019
+autoplay = true

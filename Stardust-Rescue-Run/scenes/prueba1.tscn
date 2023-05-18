@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwi3inwjs705s"]
+[gd_scene load_steps=17 format=3 uid="uid://dwi3inwjs705s"]
 
 [ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_jp68k"]
 [ext_resource type="PackedScene" uid="uid://b6ik1gcwl06mv" path="res://scenes/planeta_1.tscn" id="2_efnhu"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="11_idgnv"]
 [ext_resource type="PackedScene" uid="uid://6kgvire6s6go" path="res://scenes/monito2.tscn" id="12_lx8um"]
 [ext_resource type="PackedScene" uid="uid://vkaj2nfgje5j" path="res://scenes/monito3.tscn" id="13_rfnxn"]
+[ext_resource type="PackedScene" uid="uid://bn6lp2xtffdbp" path="res://scenes/portal.tscn" id="14_ro7ek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drse7"]
 size = Vector2(227, 4006)
@@ -104,3 +105,6 @@ position = Vector2(-1131, -108)
 [node name="monito3" parent="." instance=ExtResource("13_rfnxn")]
 position = Vector2(-1477, -1328)
 rotation = -1.5708
+
+[node name="portal" parent="." instance=ExtResource("14_ro7ek")]
+position = Vector2(710, 1482)

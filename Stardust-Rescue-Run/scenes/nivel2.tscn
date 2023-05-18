@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://onvp3bp8n63n"]
+
+[ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_tj3pr"]
+[ext_resource type="PackedScene" uid="uid://b6ik1gcwl06mv" path="res://scenes/planeta_1.tscn" id="2_b677y"]
+[ext_resource type="PackedScene" uid="uid://q16jwji1jxh5" path="res://scenes/planeta_3.tscn" id="3_gdfxl"]
+[ext_resource type="PackedScene" uid="uid://dgtl31rl4chb0" path="res://scenes/planeta_4.tscn" id="4_pjr2u"]
+[ext_resource type="PackedScene" uid="uid://cylp7fbaa5flw" path="res://scenes/planeta_5.tscn" id="5_hmp67"]
+[ext_resource type="PackedScene" uid="uid://fxfs0cc75lge" path="res://scenes/planeta_6.tscn" id="6_geggn"]
+[ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="8_jkjtu"]
+[ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="9_f27v6"]
+[ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="10_ijjyk"]
+[ext_resource type="AudioStream" uid="uid://bfluy4a1pnm3" path="res://assets/Ost/niveles/level1.mp3" id="11_fh1aq"]
+[ext_resource type="PackedScene" uid="uid://6kgvire6s6go" path="res://scenes/monito2.tscn" id="12_6c1fs"]
+[ext_resource type="PackedScene" uid="uid://vkaj2nfgje5j" path="res://scenes/monito3.tscn" id="13_8txsb"]
+[ext_resource type="PackedScene" uid="uid://bn6lp2xtffdbp" path="res://scenes/portal.tscn" id="14_82kor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drse7"]
+size = Vector2(227, 4006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjmh3"]
+size = Vector2(4062, 199)
+
+[node name="nivel2" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2000.0
+offset_top = -2000.0
+offset_right = 2000.0
+offset_bottom = 2000.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tj3pr")
+metadata/_edit_lock_ = true
+
+[node name="Planeta1" parent="." instance=ExtResource("2_b677y")]
+position = Vector2(1114, 748)
+
+[node name="Planeta3" parent="." instance=ExtResource("3_gdfxl")]
+position = Vector2(-1302, -1327)
+
+[node name="Planeta4" parent="." instance=ExtResource("4_pjr2u")]
+position = Vector2(71, -663)
+
+[node name="Planeta5" parent="." instance=ExtResource("5_hmp67")]
+position = Vector2(1270, -1314)
+
+[node name="Planeta6" parent="." instance=ExtResource("6_geggn")]
+position = Vector2(-527, 1163)
+
+[node name="SPACESHIP" parent="." instance=ExtResource("8_jkjtu")]
+position = Vector2(-1533, -377)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SPACESHIP"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="monito" parent="." instance=ExtResource("9_f27v6")]
+position = Vector2(72, -852)
+
+[node name="Blast" parent="." instance=ExtResource("10_ijjyk")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1533, -377)
+zoom = Vector2(0.8, 0.8)
+limit_left = -1800
+limit_top = -1800
+limit_right = 1800
+limit_bottom = 1800
+editor_draw_limits = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1914, -2)
+shape = SubResource("RectangleShape2D_drse7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 1899.5)
+shape = SubResource("RectangleShape2D_gjmh3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -1904)
+shape = SubResource("RectangleShape2D_gjmh3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1917, -1)
+shape = SubResource("RectangleShape2D_drse7")
+
+[node name="level1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_fh1aq")
+autoplay = true
+
+[node name="monito2" parent="." instance=ExtResource("12_6c1fs")]
+position = Vector2(-1131, -108)
+
+[node name="monito3" parent="." instance=ExtResource("13_8txsb")]
+position = Vector2(-1477, -1328)
+rotation = -1.5708
+
+[node name="Area2D" parent="." instance=ExtResource("14_82kor")]
+position = Vector2(710, 1482)
