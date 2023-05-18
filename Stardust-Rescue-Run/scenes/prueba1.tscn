@@ -57,6 +57,9 @@ position = Vector2(-527, 1163)
 [node name="Planeta2" parent="." instance=ExtResource("4_j27e6")]
 position = Vector2(-1128, 28)
 
+[node name="portal" parent="." instance=ExtResource("14_ro7ek")]
+position = Vector2(710, 1482)
+
 [node name="SPACESHIP" parent="." instance=ExtResource("10_eo8l6")]
 position = Vector2(-1000, -1000)
 
@@ -105,6 +108,3 @@ position = Vector2(-1131, -108)
 [node name="monito3" parent="." instance=ExtResource("13_rfnxn")]
 position = Vector2(-1477, -1328)
 rotation = -1.5708
-
-[node name="portal" parent="." instance=ExtResource("14_ro7ek")]
-position = Vector2(710, 1482)
