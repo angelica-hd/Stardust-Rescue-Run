@@ -11,7 +11,7 @@ func _ready():
 	exit.pressed.connect(_on_exit_pressed)
 	
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://scenes/prueba1.tscn")
+	Game.next_level()
 
 func _on_exit_pressed():
 	get_tree().quit()

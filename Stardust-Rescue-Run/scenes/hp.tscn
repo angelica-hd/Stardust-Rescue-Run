@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://bmpfmomnpocq"]
 
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="1_g0mrm"]
 [ext_resource type="Script" path="res://script/hp.gd" id="2_mm7fe"]

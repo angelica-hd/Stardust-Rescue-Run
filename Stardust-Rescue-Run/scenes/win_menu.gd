@@ -11,10 +11,10 @@ func _ready():
 	next.pressed.connect(_on_next_pressed)
 
 func _on_retry_pressed():
-	get_tree().change_scene_to_file("res://scenes/prueba1.tscn")
+	Game.retry_level()
 	
 func _on_exit_pressed():
 	get_tree().quit()
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scenes/nivel2.tscn")
+	Game.next_level()

@@ -15,6 +15,10 @@ run/main_scene="res://scenes/mainmenu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://scenes/game.tscn"
+
 [display]
 
 window/size/window_width_override=1280

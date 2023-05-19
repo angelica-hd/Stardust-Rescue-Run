@@ -10,7 +10,7 @@ func _ready():
 
 
 func _on_retry_pressed():
-	get_tree().change_scene_to_file("res://scenes/prueba1.tscn")
+	Game.retry_level()
 	
 func _on_exit_pressed():
 	get_tree().quit()
