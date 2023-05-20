@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://fxfs0cc75lge"]
+[gd_scene load_steps=10 format=3 uid="uid://fxfs0cc75lge"]
 
 [ext_resource type="Script" path="res://script/planeta.gd" id="1_m0sr3"]
 [ext_resource type="Texture2D" uid="uid://c4mrg1es5hhyt" path="res://assets/Planetas/anillo.png" id="2_3c5k2"]
+[ext_resource type="Texture2D" uid="uid://4nueh1g0c1gi" path="res://assets/Deco/arrow_sheet-.png" id="3_0yi13"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
 friction = 0.3
@@ -11,6 +12,18 @@ radius = 315.729
 
 [sub_resource type="Animation" id="Animation_17wvj"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ArrowSheet-:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_kx1f5"]
 resource_name = "rotación"
@@ -28,6 +41,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowSheet-:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_grpbn"]
@@ -63,9 +88,16 @@ position = Vector2(0, -2)
 scale = Vector2(3.2, 3.2)
 texture = ExtResource("2_3c5k2")
 hframes = 10
-frame = 2
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_mwdt7")
+
+[node name="ArrowSheet-" type="Sprite2D" parent="."]
+self_modulate = Color(0.890196, 0.396078, 0.470588, 0.717647)
+position = Vector2(1, -2)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_0yi13")
+hframes = 2

@@ -3,10 +3,12 @@ extends StaticBody2D
 @export var vel_rotacion : float = 1.0
 @onready var animation_player = $AnimationPlayer
 @onready var sprite = $Sprite
+@onready var flecha = $AnimationPlayer2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animation_player.play("rotación")
+	
 	pass # Replace with function body.
 
 

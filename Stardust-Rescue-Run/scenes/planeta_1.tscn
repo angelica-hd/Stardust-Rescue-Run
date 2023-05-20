@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6ik1gcwl06mv"]
+[gd_scene load_steps=10 format=3 uid="uid://b6ik1gcwl06mv"]
 
 [ext_resource type="Script" path="res://script/planeta.gd" id="1_btfva"]
 [ext_resource type="Texture2D" uid="uid://786bbh1mnfjd" path="res://assets/Planetas/tierra.png" id="2_wb5q8"]
+[ext_resource type="Texture2D" uid="uid://b44rd8uhfxcjg" path="res://assets/Deco/arrow_sheet (2).png" id="3_lh2j4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fmeyo"]
 friction = 0.3
@@ -11,6 +12,18 @@ radius = 389.329
 
 [sub_resource type="Animation" id="Animation_17wvj"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ArrowSheet(2):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_kx1f5"]
 resource_name = "rotación"
@@ -28,6 +41,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowSheet(2):frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_grpbn"]
@@ -66,7 +91,15 @@ position = Vector2(-2, 0)
 scale = Vector2(3.8, 3.8)
 texture = ExtResource("2_wb5q8")
 hframes = 10
+frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("CircleShape2D_y84yg")
+
+[node name="ArrowSheet(2)" type="Sprite2D" parent="."]
+self_modulate = Color(0.745098, 1, 0.560784, 0.584314)
+position = Vector2(0, -2)
+scale = Vector2(4, 4)
+texture = ExtResource("3_lh2j4")
+hframes = 2

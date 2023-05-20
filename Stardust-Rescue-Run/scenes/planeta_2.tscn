@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cokxsvirw3fho"]
+[gd_scene load_steps=10 format=3 uid="uid://cokxsvirw3fho"]
 
 [ext_resource type="Script" path="res://script/planeta.gd" id="1_3neqa"]
 [ext_resource type="Texture2D" uid="uid://cgw0tcj6vi11l" path="res://assets/Planetas/marte.png" id="2_beusd"]
+[ext_resource type="Texture2D" uid="uid://b44rd8uhfxcjg" path="res://assets/Deco/arrow_sheet (2).png" id="3_3x5dl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kfr1h"]
 friction = 0.3
@@ -11,6 +12,18 @@ radius = 232.174
 
 [sub_resource type="Animation" id="Animation_17wvj"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ArrowSheet(2):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_kx1f5"]
 resource_name = "rotación"
@@ -28,6 +41,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowSheet(2):frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_grpbn"]
@@ -66,3 +91,10 @@ hframes = 10
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("CircleShape2D_mwdt7")
+
+[node name="ArrowSheet(2)" type="Sprite2D" parent="."]
+self_modulate = Color(0.745098, 1, 0.560784, 0.584314)
+position = Vector2(0, -2)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_3x5dl")
+hframes = 2
