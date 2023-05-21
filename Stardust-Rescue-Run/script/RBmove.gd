@@ -54,9 +54,11 @@ func move():
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		for body in atrapar.get_overlapping_bodies():
-			entro_monito(body)
+			if body is Monito:
+				entro_monito(body)
 
 func entro_monito(body):
+	#Game.add_monitos(body)
 	body.queue_free()
 	monitos += 1
 	pass # Replace with function body.
