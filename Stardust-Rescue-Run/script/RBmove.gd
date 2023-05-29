@@ -52,7 +52,7 @@ func move():
 		pivote.rotation = 89.55
 
 func _input(event):
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("catch"):
 		for body in atrapar.get_overlapping_bodies():
 			if body is Monito:
 				entro_monito(body)
