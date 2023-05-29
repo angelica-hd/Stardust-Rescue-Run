@@ -8,5 +8,5 @@ func _ready():
 
 func _on_portal_body_entered(body):
 	if body.name == "SPACESHIP":
-		if body.monitos == 5:
+		if body.monitos == Game.get_level_monitos():
 			get_tree().change_scene_to_file("res://scenes/win_menu.tscn")
