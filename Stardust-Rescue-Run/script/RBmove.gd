@@ -6,6 +6,8 @@ var monitos = 0;
 @onready var atrapar = $Area2D
 @onready var pivote = $Node2D
 @onready var Fueld = $CanvasLayer/Fueld
+@onready var cont = $CanvasLayer/MarginContainer/contador
+
 
 const max_fueld = 100
 var fueld = 100:
@@ -20,12 +22,12 @@ func _ready():
 	animation_player.play("fueguito")
 	var pos = position
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
 	fueld -= (delta*0.5)
+	cont.text = "Monitos: "+str(monitos)+"/"+str(Game.get_level_monitos())
 	if fueld < 0:
 		get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
 	
