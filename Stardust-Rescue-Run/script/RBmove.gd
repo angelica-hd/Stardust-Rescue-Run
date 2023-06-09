@@ -26,7 +26,7 @@ func _ready():
 
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
-	fueld -= (delta*0.5)
+	fueld -= (delta)
 	cont.text = "Monitos: "+str(monitos)+"/"+str(Game.get_level_monitos())
 	if fueld < 0:
 		get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
@@ -63,6 +63,9 @@ func entro_monito(body):
 	#Game.add_monitos(body)
 	body.queue_free()
 	monitos += 1
+	fueld += 10
+	if fueld > 100:
+		fueld = 100
 	pass # Replace with function body.
 	
 

@@ -75,6 +75,6 @@ text = "Exit"
 
 [node name="Menu_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_kbh2y")
-volume_db = 10.09
+volume_db = -10.0
 autoplay = true
 bus = &"Menu"

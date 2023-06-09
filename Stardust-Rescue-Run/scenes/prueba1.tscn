@@ -102,6 +102,7 @@ shape = SubResource("RectangleShape2D_drse7")
 
 [node name="level1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7xxlc")
+volume_db = -15.0
 autoplay = true
 
 [node name="monito2" parent="." instance=ExtResource("12_lx8um")]
