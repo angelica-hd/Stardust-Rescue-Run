@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c24g58ab4jgo4"]
 
-[ext_resource type="Script" path="res://scenes/volume-bar.gd" id="1_mxnr3"]
+[ext_resource type="Script" path="res://script/volume-bar.gd" id="1_mxnr3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

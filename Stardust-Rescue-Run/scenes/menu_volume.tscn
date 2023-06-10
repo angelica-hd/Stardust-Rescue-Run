@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bq2x07ryy47jr"]
 
-[ext_resource type="Script" path="res://scenes/menu_volume.gd" id="1_myyga"]
+[ext_resource type="Script" path="res://script/menu_volume.gd" id="1_myyga"]
 
 [node name="menu-volume" type="Control"]
 layout_mode = 3

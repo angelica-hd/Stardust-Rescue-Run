@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://onvp3bp8n63n"]
 
-[ext_resource type="Script" path="res://scenes/nivel2.gd" id="1_o5fhr"]
+[ext_resource type="Script" path="res://script/nivel2.gd" id="1_o5fhr"]
 [ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_tj3pr"]
 [ext_resource type="PackedScene" uid="uid://b6ik1gcwl06mv" path="res://scenes/planeta_1.tscn" id="2_b677y"]
 [ext_resource type="PackedScene" uid="uid://q16jwji1jxh5" path="res://scenes/planeta_3.tscn" id="3_gdfxl"]

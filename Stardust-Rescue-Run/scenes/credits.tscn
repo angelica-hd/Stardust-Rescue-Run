@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://by1vjji1bsv5n"]
+[gd_scene load_steps=6 format=3 uid="uid://by1vjji1bsv5n"]
 
 [ext_resource type="Theme" uid="uid://b8bbj1lr141rv" path="res://resources/new_theme.tres" id="1_13w8y"]
+[ext_resource type="Script" path="res://script/credits.gd" id="2_2bmu7"]
 [ext_resource type="Texture2D" uid="uid://duck2rscjnb27" path="res://assets/Fondos/Space2.png" id="3_w0osb"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="4_e3j7c"]
 [ext_resource type="AudioStream" uid="uid://bsh8351qabg7b" path="res://assets/Ost/menus/pause_menu.wav" id="5_6mpdm"]
@@ -17,12 +18,23 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.05, 1.05)
 theme = ExtResource("1_13w8y")
+script = ExtResource("2_2bmu7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("3_w0osb")
 stretch_mode = 6
+
+[node name="backk" type="Button" parent="TextureRect"]
+unique_name_in_owner = true
+offset_left = 947.81
+offset_top = 23.0476
+offset_right = 1085.81
+offset_bottom = 98.0476
+theme_override_fonts/font = ExtResource("4_e3j7c")
+theme_override_font_sizes/font_size = 30
+text = "back"
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
