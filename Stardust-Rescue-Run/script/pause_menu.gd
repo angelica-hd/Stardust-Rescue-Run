@@ -26,3 +26,4 @@ func _on_retry_pressed():
 func _on_exit2_pressed():
 	get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
 	get_tree().paused = false
+

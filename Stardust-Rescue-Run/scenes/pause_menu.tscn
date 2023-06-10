@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj2y1u0x8g3f"]
+[gd_scene load_steps=5 format=3 uid="uid://cj2y1u0x8g3f"]
 
 [ext_resource type="Script" path="res://script/pause_menu.gd" id="1_3d514"]
 [ext_resource type="Theme" uid="uid://b8bbj1lr141rv" path="res://resources/new_theme.tres" id="1_j515a"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_7vjpt"]
+[ext_resource type="PackedScene" uid="uid://c24g58ab4jgo4" path="res://scenes/volume-bar.tscn" id="4_gfaxt"]
 
 [node name="PauseMenu" type="MarginContainer"]
 process_mode = 3
@@ -61,3 +62,10 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_7vjpt")
 theme_override_font_sizes/font_size = 30
 text = "Main Menu"
+
+[node name="MusicV" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Mvolume" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_gfaxt")]
+layout_mode = 2
