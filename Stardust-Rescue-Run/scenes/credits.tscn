@@ -28,6 +28,7 @@ stretch_mode = 6
 
 [node name="backk" type="Button" parent="TextureRect"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 947.81
 offset_top = 23.0476
 offset_right = 1085.81
