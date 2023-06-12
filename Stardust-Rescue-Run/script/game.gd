@@ -18,3 +18,6 @@ func retry_level():
 
 func get_level_monitos():
 	return level_monitos[level]
+	
+func get_level():
+	return level+1
