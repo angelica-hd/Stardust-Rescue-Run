@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="5_uy5wy"]
 [ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="6_hboj6"]
 [ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="7_1u853"]
-[ext_resource type="AudioStream" uid="uid://bfluy4a1pnm3" path="res://assets/Ost/niveles/level1.mp3" id="8_if81p"]
+[ext_resource type="AudioStream" uid="uid://cp6brgba0efdv" path="res://assets/Ost/niveles/1. Into The Spaceship.wav" id="8_3ri74"]
 [ext_resource type="PackedScene" uid="uid://dxqltbqqnkwwc" path="res://scenes/monito4.tscn" id="9_ogkgg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cmdp"]
@@ -91,8 +91,8 @@ position = Vector2(-1917, -1)
 shape = SubResource("RectangleShape2D_2cmdp")
 
 [node name="level1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_if81p")
-volume_db = -15.0
+stream = ExtResource("8_3ri74")
+volume_db = -8.81
 autoplay = true
 bus = &"Niveles"
 
