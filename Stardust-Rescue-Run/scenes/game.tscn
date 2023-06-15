@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://mwjp27ularpb"]
+[gd_scene load_steps=5 format=3 uid="uid://mwjp27ularpb"]
 
 [ext_resource type="Script" path="res://script/game.gd" id="1_caoxe"]
+[ext_resource type="PackedScene" uid="uid://d1c2xl06b1r3u" path="res://scenes/nivel_tutorial.tscn" id="2_2yd4h"]
 [ext_resource type="PackedScene" uid="uid://dwi3inwjs705s" path="res://scenes/prueba1.tscn" id="2_gm2wn"]
 [ext_resource type="PackedScene" uid="uid://onvp3bp8n63n" path="res://scenes/nivel2.tscn" id="3_lc2jo"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_caoxe")
-levels = Array[PackedScene]([ExtResource("2_gm2wn"), ExtResource("3_lc2jo")])
+levels = Array[PackedScene]([ExtResource("2_2yd4h"), ExtResource("2_gm2wn"), ExtResource("3_lc2jo")])
