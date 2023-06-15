@@ -8,6 +8,8 @@ var monitos = 0;
 @onready var Fueld = $CanvasLayer/Fueld
 @onready var cont = $CanvasLayer/MarginContainer/contador
 @onready var text = $CanvasLayer3/tutorialText
+@onready var catch = $Catch
+
 
 var t0 = 0
 var moved = false
@@ -88,9 +90,11 @@ func _input(event):
 		for body in atrapar.get_overlapping_bodies():
 			if body is Monito:
 				entro_monito(body)
+				
 
 func entro_monito(body):
 	#Game.add_monitos(body)
+	catch.play()
 	body.queue_free()
 	monitos += 1
 	fueld += 10
