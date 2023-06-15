@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b002115lmcq56"]
+[gd_scene load_steps=7 format=3 uid="uid://b002115lmcq56"]
 
 [ext_resource type="Script" path="res://script/game_over_menu.gd" id="1_3icip"]
 [ext_resource type="Texture2D" uid="uid://duck2rscjnb27" path="res://assets/Fondos/Space2.png" id="2_h3bhw"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_4n8s3"]
+[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/sfx/Confirm 1.wav" id="5_cfidb"]
 [ext_resource type="AudioStream" uid="uid://hvkx5cs8fi46" path="res://assets/Ost/menus/game_over_music.mp3" id="5_ye78d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab3k7"]
@@ -88,3 +89,6 @@ horizontal_alignment = 1
 [node name="game_over" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ye78d")
 autoplay = true
+
+[node name="Confirm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cfidb")

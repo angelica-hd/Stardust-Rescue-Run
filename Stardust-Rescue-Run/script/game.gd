@@ -6,6 +6,10 @@ extends Node
 var level = -1
 #const blast_scene = preload("res://Blast.gd")
 
+func first_level():
+	level = 0
+	get_tree().change_scene_to_packed(levels[0])
+	
 func next_level():
 	if levels.size() >= level+1:
 		level+=1
