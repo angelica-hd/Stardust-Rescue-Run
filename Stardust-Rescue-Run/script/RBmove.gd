@@ -38,22 +38,22 @@ func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PRO
 		
 	if Game.get_level() == 1: # PARA NIVEL TUTORIAL
 		if moved == false:
-			text.text = "Presiona las flechas para moverte
-			 hacia arriba, abajo, derecha e izquierda"
+			text.text = "Presiona las flechas hacia arriba, abajo, derecha e
+			 izquierda para moverte y explorar el mapa"
 		elif catched == false:
 			text.text = "Presiona C para atrapar un alien cuando lo tengas cerca,
 			 cuidado con las gravedades de los planetas!"
 		elif escaped == false: # VA CAMBIANDO ENTRE LOS 3 MENSAJES CADA 4 SEGUNDOS
 			t0 += delta
 			if t0 < 4:
-				text.text = "Rescata todos los aliens y podras escapar! Encuentra la 
-				salida antes que se agote la gasolina de tu nave"
+				text.text = "Explora el mapa para encontrar los aliens y la salida,
+				 cuidado con las gravedades de los planetas!"
 			elif t0 < 8:
-				text.text = "Puedes ver cuantos aliens quedan por 
-				rescatar en la esquina superior derecha"
+				text.text = "Puedes ver cuantos aliens quedan por rescatar en la
+				 esquina superior derecha"
 			elif t0 < 12:
-				text.text = "
-				Explora el mapa para hallar los aliens y la salida!"
+				text.text = "Rescata todos los aliens para activar la salida y
+				 escapa antes que se agote la gasolina de tu nave"
 			else:
 				t0 = 0
 
