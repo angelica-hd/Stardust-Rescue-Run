@@ -49,6 +49,9 @@ metadata/_aseprite_wizard_config_ = {
 [node name="Planeta1" parent="." instance=ExtResource("2_ugsbl")]
 position = Vector2(919, -887)
 
+[node name="Planeta2" parent="." instance=ExtResource("12_21dbp")]
+position = Vector2(-961, -1114)
+
 [node name="Planeta5" parent="." instance=ExtResource("3_mounp")]
 position = Vector2(1010, 1204)
 
@@ -203,6 +206,3 @@ bus = &"Niveles"
 [node name="monito4" parent="." instance=ExtResource("9_ogkgg")]
 position = Vector2(1000, 1003)
 collision_layer = 10
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("12_21dbp")]
-position = Vector2(-961, -1114)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c040dm715cg06"]
+[gd_scene load_steps=11 format=3 uid="uid://c040dm715cg06"]
 
 [ext_resource type="Script" path="res://script/planeta.gd" id="1_su4kp"]
+[ext_resource type="Script" path="res://script/Planeta1.gd" id="2_8a5xn"]
 [ext_resource type="Texture2D" uid="uid://52a581sfr8io" path="res://assets/Planetas/Tierra2.png" id="2_kmmoq"]
 [ext_resource type="Texture2D" uid="uid://b44rd8uhfxcjg" path="res://assets/Deco/arrow_sheet (2).png" id="3_jwvex"]
 
@@ -76,6 +77,7 @@ gravity_point = true
 gravity = 1000.0
 linear_damp_space_override = 2
 angular_damp_space_override = 2
+script = ExtResource("2_8a5xn")
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="Planeta1"]
 shape = SubResource("CircleShape2D_ylmco")
