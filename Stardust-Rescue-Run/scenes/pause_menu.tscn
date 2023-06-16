@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://b8bbj1lr141rv" path="res://resources/new_theme.tres" id="1_j515a"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_7vjpt"]
 [ext_resource type="PackedScene" uid="uid://c24g58ab4jgo4" path="res://scenes/volume-bar.tscn" id="4_gfaxt"]
-[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/sfx/Confirm 1.wav" id="5_kbn74"]
+[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/sfx/Confirm 1.wav" id="5_norev"]
 
 [node name="PauseMenu" type="MarginContainer"]
 process_mode = 3
@@ -75,4 +75,4 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="Confirm" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_kbn74")
+stream = ExtResource("5_norev")

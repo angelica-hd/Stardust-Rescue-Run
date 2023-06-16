@@ -1,7 +1,7 @@
 extends Node
 
 @export var levels : Array[PackedScene]
-@export var level_monitos : Array[int] = [2, 5, 3] 
+@export var level_monitos : Array[int] = [2, 3, 5] 
 
 var level = -1
 #const blast_scene = preload("res://Blast.gd")

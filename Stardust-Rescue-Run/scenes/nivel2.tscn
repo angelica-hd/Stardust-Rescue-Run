@@ -1,17 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://onvp3bp8n63n"]
+[gd_scene load_steps=15 format=3 uid="uid://onvp3bp8n63n"]
 
-[ext_resource type="Script" path="res://script/nivel2.gd" id="1_o5fhr"]
-[ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_tj3pr"]
-[ext_resource type="PackedScene" uid="uid://b6ik1gcwl06mv" path="res://scenes/planeta_1.tscn" id="2_b677y"]
+[ext_resource type="Texture2D" uid="uid://bn5sjtpl66r73" path="res://assets/Fondos/Space4.png" id="1_xqu14"]
 [ext_resource type="PackedScene" uid="uid://q16jwji1jxh5" path="res://scenes/planeta_3.tscn" id="3_gdfxl"]
+[ext_resource type="PackedScene" uid="uid://c040dm715cg06" path="res://scenes/planeta_7.tscn" id="3_yeh70"]
 [ext_resource type="PackedScene" uid="uid://dgtl31rl4chb0" path="res://scenes/planeta_4.tscn" id="4_pjr2u"]
-[ext_resource type="PackedScene" uid="uid://cylp7fbaa5flw" path="res://scenes/planeta_5.tscn" id="5_hmp67"]
-[ext_resource type="PackedScene" uid="uid://fxfs0cc75lge" path="res://scenes/planeta_6.tscn" id="6_geggn"]
 [ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="8_jkjtu"]
+[ext_resource type="AudioStream" uid="uid://bau3cqc3lnm0k" path="res://assets/Ost/niveles/Kevin MacLeod - Itty Bitty 8 Bit.mp3" id="8_kxa5r"]
 [ext_resource type="PackedScene" uid="uid://cwmm54rgfenwj" path="res://scenes/monito.tscn" id="9_f27v6"]
+[ext_resource type="PackedScene" uid="uid://chahrbniutukr" path="res://scenes/planeta_8.tscn" id="9_kba3r"]
+[ext_resource type="PackedScene" uid="uid://dxqltbqqnkwwc" path="res://scenes/monito4.tscn" id="9_v6n46"]
 [ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="10_ijjyk"]
-[ext_resource type="AudioStream" uid="uid://bfluy4a1pnm3" path="res://assets/Ost/niveles/level1.mp3" id="11_fh1aq"]
-[ext_resource type="PackedScene" uid="uid://6kgvire6s6go" path="res://scenes/monito2.tscn" id="12_6c1fs"]
 [ext_resource type="PackedScene" uid="uid://vkaj2nfgje5j" path="res://scenes/monito3.tscn" id="13_8txsb"]
 [ext_resource type="PackedScene" uid="uid://bn6lp2xtffdbp" path="res://scenes/portal.tscn" id="14_82kor"]
 
@@ -22,12 +20,11 @@ size = Vector2(227, 4006)
 size = Vector2(4062, 199)
 
 [node name="nivel2" type="Node2D"]
-script = ExtResource("1_o5fhr")
 metadata/_edit_horizontal_guides_ = []
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.866667, 0.219608, 0.211765, 1)
-self_modulate = Color(1, 1, 0.117647, 1)
+modulate = Color(0.682353, 0.698039, 1, 0.976471)
+self_modulate = Color(0.607843, 0.878431, 1, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -39,26 +36,23 @@ offset_right = 2000.0
 offset_bottom = 2000.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_tj3pr")
+texture = ExtResource("1_xqu14")
 metadata/_edit_lock_ = true
 
-[node name="Planeta1" parent="." instance=ExtResource("2_b677y")]
-position = Vector2(1114, 748)
+[node name="Planeta4" parent="." instance=ExtResource("4_pjr2u")]
+position = Vector2(1334, 1321)
+
+[node name="Planeta1" parent="." instance=ExtResource("3_yeh70")]
+position = Vector2(609, -1161)
+
+[node name="Planeta2" parent="." instance=ExtResource("9_kba3r")]
+position = Vector2(-1133, 896)
 
 [node name="Planeta3" parent="." instance=ExtResource("3_gdfxl")]
-position = Vector2(-1302, -1327)
-
-[node name="Planeta4" parent="." instance=ExtResource("4_pjr2u")]
-position = Vector2(71, -663)
-
-[node name="Planeta5" parent="." instance=ExtResource("5_hmp67")]
-position = Vector2(1270, -1314)
-
-[node name="Planeta6" parent="." instance=ExtResource("6_geggn")]
-position = Vector2(-527, 1163)
+position = Vector2(-969, -929)
 
 [node name="Portal" parent="." instance=ExtResource("14_82kor")]
-position = Vector2(710, 1482)
+position = Vector2(1463, -279)
 
 [node name="SPACESHIP" parent="." instance=ExtResource("8_jkjtu")]
 position = Vector2(-1533, -377)
@@ -67,7 +61,16 @@ position = Vector2(-1533, -377)
 remote_path = NodePath("../../Camera2D")
 
 [node name="monito" parent="." instance=ExtResource("9_f27v6")]
-position = Vector2(72, -852)
+position = Vector2(1337, 1127)
+
+[node name="monito2" parent="." instance=ExtResource("9_v6n46")]
+modulate = Color(0, 0.976471, 0.611765, 1)
+self_modulate = Color(0.584314, 0.294118, 0.819608, 1)
+position = Vector2(607, -1394)
+
+[node name="monito3" parent="." instance=ExtResource("13_8txsb")]
+position = Vector2(-1133, 676)
+collision_layer = 10
 
 [node name="Blast" parent="." instance=ExtResource("10_ijjyk")]
 
@@ -99,12 +102,5 @@ position = Vector2(-1917, -1)
 shape = SubResource("RectangleShape2D_drse7")
 
 [node name="level1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_fh1aq")
+stream = ExtResource("8_kxa5r")
 autoplay = true
-
-[node name="monito2" parent="." instance=ExtResource("12_6c1fs")]
-position = Vector2(-1131, -108)
-
-[node name="monito3" parent="." instance=ExtResource("13_8txsb")]
-position = Vector2(-1477, -1328)
-rotation = -1.5708

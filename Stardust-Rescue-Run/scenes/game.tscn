@@ -7,4 +7,4 @@
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_caoxe")
-levels = Array[PackedScene]([ExtResource("2_2yd4h"), ExtResource("2_gm2wn"), ExtResource("3_lc2jo")])
+levels = Array[PackedScene]([ExtResource("2_2yd4h"), ExtResource("3_lc2jo"), ExtResource("2_gm2wn")])

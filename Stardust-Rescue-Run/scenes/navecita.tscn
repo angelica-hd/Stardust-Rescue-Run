@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2y1u0x8g3f" path="res://scenes/pause_menu.tscn" id="4_i53w4"]
 [ext_resource type="PackedScene" uid="uid://bmpfmomnpocq" path="res://scenes/hp.tscn" id="5_471na"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="6_f640r"]
-[ext_resource type="AudioStream" uid="uid://grp5kocxtxwv" path="res://assets/sfx/Big Egg collect 1.wav" id="7_c55pw"]
+[ext_resource type="AudioStream" uid="uid://grp5kocxtxwv" path="res://assets/sfx/Big Egg collect 1.wav" id="7_pwagp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06yi8"]
 radius = 42.5
@@ -143,4 +143,4 @@ theme = SubResource("Theme_oysqr")
 horizontal_alignment = 2
 
 [node name="Catch" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_c55pw")
+stream = ExtResource("7_pwagp")
