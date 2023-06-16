@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://onvp3bp8n63n"]
+[gd_scene load_steps=16 format=3 uid="uid://onvp3bp8n63n"]
 
-[ext_resource type="Texture2D" uid="uid://bn5sjtpl66r73" path="res://assets/Fondos/Space4.png" id="1_xqu14"]
+[ext_resource type="Texture2D" uid="uid://ck67kw85dn6xx" path="res://assets/Fondos/Space5.png" id="1_1gw8d"]
 [ext_resource type="PackedScene" uid="uid://q16jwji1jxh5" path="res://scenes/planeta_3.tscn" id="3_gdfxl"]
 [ext_resource type="PackedScene" uid="uid://c040dm715cg06" path="res://scenes/planeta_7.tscn" id="3_yeh70"]
 [ext_resource type="PackedScene" uid="uid://dgtl31rl4chb0" path="res://scenes/planeta_4.tscn" id="4_pjr2u"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dxqltbqqnkwwc" path="res://scenes/monito4.tscn" id="9_v6n46"]
 [ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="10_ijjyk"]
 [ext_resource type="PackedScene" uid="uid://vkaj2nfgje5j" path="res://scenes/monito3.tscn" id="13_8txsb"]
+[ext_resource type="PackedScene" uid="uid://cylp7fbaa5flw" path="res://scenes/planeta_5.tscn" id="13_gkpi6"]
 [ext_resource type="PackedScene" uid="uid://bn6lp2xtffdbp" path="res://scenes/portal.tscn" id="14_82kor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drse7"]
@@ -36,7 +37,7 @@ offset_right = 2000.0
 offset_bottom = 2000.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xqu14")
+texture = ExtResource("1_1gw8d")
 metadata/_edit_lock_ = true
 
 [node name="Planeta4" parent="." instance=ExtResource("4_pjr2u")]
@@ -46,7 +47,10 @@ position = Vector2(1334, 1321)
 position = Vector2(609, -1161)
 
 [node name="Planeta2" parent="." instance=ExtResource("9_kba3r")]
-position = Vector2(-1133, 896)
+position = Vector2(-1165, 1200)
+
+[node name="Planeta5" parent="." instance=ExtResource("13_gkpi6")]
+position = Vector2(9, 912)
 
 [node name="Planeta3" parent="." instance=ExtResource("3_gdfxl")]
 position = Vector2(-969, -929)
@@ -69,7 +73,7 @@ self_modulate = Color(0.584314, 0.294118, 0.819608, 1)
 position = Vector2(607, -1394)
 
 [node name="monito3" parent="." instance=ExtResource("13_8txsb")]
-position = Vector2(-1133, 676)
+position = Vector2(-1165, 980)
 collision_layer = 10
 
 [node name="Blast" parent="." instance=ExtResource("10_ijjyk")]

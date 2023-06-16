@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://d1c2xl06b1r3u"]
+[gd_scene load_steps=15 format=3 uid="uid://d1c2xl06b1r3u"]
 
-[ext_resource type="Texture2D" uid="uid://r6qcmsryi5xo" path="res://assets/Fondos/Space Background.png" id="1_o7c37"]
+[ext_resource type="Texture2D" uid="uid://cuw7fc5yl1akq" path="res://assets/Fondos/SpaceX.png" id="1_8kfva"]
 [ext_resource type="PackedScene" uid="uid://b6ik1gcwl06mv" path="res://scenes/planeta_1.tscn" id="2_ugsbl"]
 [ext_resource type="PackedScene" uid="uid://cylp7fbaa5flw" path="res://scenes/planeta_5.tscn" id="3_mounp"]
 [ext_resource type="PackedScene" uid="uid://bn6lp2xtffdbp" path="res://scenes/portal.tscn" id="4_cof06"]
@@ -11,6 +11,7 @@
 [ext_resource type="Theme" uid="uid://b8bbj1lr141rv" path="res://resources/new_theme.tres" id="9_ojh35"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="10_87ht6"]
 [ext_resource type="AudioStream" uid="uid://cp6brgba0efdv" path="res://assets/Ost/niveles/1. Into The Spaceship.wav" id="10_cdaj3"]
+[ext_resource type="PackedScene" uid="uid://fxfs0cc75lge" path="res://scenes/planeta_6.tscn" id="12_21dbp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cmdp"]
 size = Vector2(227, 4006)
@@ -32,7 +33,7 @@ offset_right = 2000.0
 offset_bottom = 2000.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_o7c37")
+texture = ExtResource("1_8kfva")
 metadata/_edit_lock_ = true
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
@@ -46,7 +47,7 @@ metadata/_aseprite_wizard_config_ = {
 }
 
 [node name="Planeta1" parent="." instance=ExtResource("2_ugsbl")]
-position = Vector2(906, -589)
+position = Vector2(919, -887)
 
 [node name="Planeta5" parent="." instance=ExtResource("3_mounp")]
 position = Vector2(1010, 1204)
@@ -55,6 +56,7 @@ position = Vector2(1010, 1204)
 position = Vector2(-1038, 650)
 
 [node name="tutorial2" type="PanelContainer" parent="."]
+visible = false
 offset_left = 772.0
 offset_top = -1183.0
 offset_right = 1739.0
@@ -87,6 +89,7 @@ que indican el sentido de la gravedad.
 "
 
 [node name="tutorial3" type="PanelContainer" parent="."]
+visible = false
 offset_left = -1465.0
 offset_top = -311.0
 offset_right = -92.0
@@ -121,6 +124,7 @@ si te quedas en 0, pierdes.
 (salvarlos te recarga un poco el tanque)"
 
 [node name="tutorial4" type="PanelContainer" parent="."]
+visible = false
 offset_left = -995.0
 offset_top = 830.0
 offset_right = 139.0
@@ -159,7 +163,7 @@ position = Vector2(-1547, -1171)
 remote_path = NodePath("../../Camera2D")
 
 [node name="monito" parent="." instance=ExtResource("6_hboj6")]
-position = Vector2(1063, -763)
+position = Vector2(1076, -1061)
 
 [node name="Blast" parent="." instance=ExtResource("7_1u853")]
 
@@ -199,3 +203,6 @@ bus = &"Niveles"
 [node name="monito4" parent="." instance=ExtResource("9_ogkgg")]
 position = Vector2(1000, 1003)
 collision_layer = 10
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("12_21dbp")]
+position = Vector2(-961, -1114)

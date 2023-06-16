@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btuwtu7yxfl2f"
-path="res://.godot/imported/Space Background.png-b8ca9a523b1edcb9ecc85fa0ea56b3da.ctex"
+uid="uid://cuw7fc5yl1akq"
+path="res://.godot/imported/SpaceX.png-ed1c84632be02ba096d96d42de3d62f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fondos/Space Background.png"
-dest_files=["res://.godot/imported/Space Background.png-b8ca9a523b1edcb9ecc85fa0ea56b3da.ctex"]
+source_file="res://assets/Fondos/SpaceX.png"
+dest_files=["res://.godot/imported/SpaceX.png-ed1c84632be02ba096d96d42de3d62f9.ctex"]
 
 [params]
 

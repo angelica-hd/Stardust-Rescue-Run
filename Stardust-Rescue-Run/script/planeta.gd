@@ -1,4 +1,6 @@
+class_name Planeta
 extends StaticBody2D
+
 
 @export var vel_rotacion : float = 1.0
 @onready var animation_player = $AnimationPlayer
