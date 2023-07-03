@@ -33,8 +33,9 @@ func _ready():
 
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
-	fueld -= (delta)
-	cont.text = "Monitos: "+str(monitos)+"/"+str(Game.get_level_monitos())
+	fueld -= (delta * Game.get_level())
+	cont.text = "     Nivel "+ str(Game.get_level() - 1) + "
+	Monitos: "+str(monitos)+"/"+str(Game.get_level_monitos())
 	if fueld < 0:
 		get_tree().change_scene_to_file("res://scenes/game_over_menu.tscn")
 		
@@ -61,27 +62,29 @@ func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PRO
 
 
 func move():
+	var vector = Input.get_vector('ui_left', 'ui_right', 'ui_up', 'ui_down')
+	apply_central_impulse(4*vector)
 	if Input.is_action_pressed('ui_right'):
 		moved = true
-		apply_central_impulse(Vector2(4, 0))
+		#apply_central_impulse(Vector2(4, 0))
 		pivote.rotation = 0
 		pivote.scale.x = 1
 	
 	if Input.is_action_pressed('ui_left'):
 		moved = true
-		apply_central_impulse(Vector2(-4,0))
+		#apply_central_impulse(Vector2(-4,0))
 		pivote.rotation = 0
 		pivote.scale.x = -1
 	
 	if Input.is_action_pressed('ui_up'):
 		moved = true
-		apply_central_impulse(Vector2(0, -4))
+		#apply_central_impulse(Vector2(0, -4))
 		pivote.scale.x = 1
 		pivote.rotation = -89.55
 	
 	if Input.is_action_pressed('ui_down'):
 		moved = true
-		apply_central_impulse(Vector2(0, 4))
+		#apply_central_impulse(Vector2(0, 4))
 		pivote.scale.x = 1
 		pivote.rotation = 89.55
 

@@ -1,0 +1,151 @@
+[gd_scene load_steps=15 format=3 uid="uid://ux3tobiayhf6"]
+
+[ext_resource type="Texture2D" uid="uid://cdrv4qh6e0x0x" path="res://assets/Fondos/nivel3.png" id="1_8qwfi"]
+[ext_resource type="PackedScene" uid="uid://chahrbniutukr" path="res://scenes/planeta_8.tscn" id="4_62blj"]
+[ext_resource type="PackedScene" uid="uid://cylp7fbaa5flw" path="res://scenes/planeta_5.tscn" id="5_j2fxm"]
+[ext_resource type="Script" path="res://script/portalasesino.gd" id="6_itjuj"]
+[ext_resource type="PackedScene" uid="uid://bn6lp2xtffdbp" path="res://scenes/portal.tscn" id="7_euyti"]
+[ext_resource type="AudioStream" uid="uid://cv575kgx04xhw" path="res://assets/Ost/niveles/Canción Stardust (Escape).mp3" id="7_sy1ww"]
+[ext_resource type="PackedScene" uid="uid://cokxsvirw3fho" path="res://scenes/planeta_2.tscn" id="8_31vtq"]
+[ext_resource type="PackedScene" uid="uid://caatglmekpgj2" path="res://scenes/navecita.tscn" id="8_t0ts2"]
+[ext_resource type="PackedScene" uid="uid://dxqltbqqnkwwc" path="res://scenes/monito4.tscn" id="10_1fh02"]
+[ext_resource type="PackedScene" uid="uid://6kgvire6s6go" path="res://scenes/monito2.tscn" id="10_xxvsp"]
+[ext_resource type="PackedScene" uid="uid://vkaj2nfgje5j" path="res://scenes/monito3.tscn" id="11_d1mpm"]
+[ext_resource type="PackedScene" uid="uid://nctjjgvjl71w" path="res://scenes/blast.tscn" id="12_tsqc4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drse7"]
+size = Vector2(227, 4006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjmh3"]
+size = Vector2(4062, 199)
+
+[node name="nivel2" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2000.0
+offset_top = -2000.0
+offset_right = 2000.0
+offset_bottom = 2000.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8qwfi")
+metadata/_edit_lock_ = true
+
+[node name="Planeta1" parent="." instance=ExtResource("5_j2fxm")]
+position = Vector2(-652, -1258)
+scale = Vector2(1.8, 1.8)
+
+[node name="Planeta2" parent="." instance=ExtResource("4_62blj")]
+position = Vector2(619, 916)
+
+[node name="Planeta7" parent="." instance=ExtResource("4_62blj")]
+position = Vector2(743, -483)
+scale = Vector2(1.2, 1.2)
+
+[node name="Planeta3" parent="." instance=ExtResource("8_31vtq")]
+position = Vector2(210, 1433)
+
+[node name="Planeta8" parent="." instance=ExtResource("8_31vtq")]
+position = Vector2(1436, -802)
+
+[node name="Planeta4" parent="." instance=ExtResource("8_31vtq")]
+position = Vector2(-1414, -739)
+
+[node name="Planeta6" parent="." instance=ExtResource("8_31vtq")]
+position = Vector2(-1192, 518)
+scale = Vector2(2, 2)
+
+[node name="Planeta5" parent="." instance=ExtResource("5_j2fxm")]
+position = Vector2(1343, 645)
+
+[node name="Planeta9" parent="." instance=ExtResource("5_j2fxm")]
+position = Vector2(692, -1799)
+
+[node name="Portal" parent="." instance=ExtResource("7_euyti")]
+position = Vector2(-1360, 1475)
+rotation = 1.5708
+
+[node name="Portal2" parent="." instance=ExtResource("7_euyti")]
+modulate = Color(1, 0.329412, 0.32549, 1)
+position = Vector2(1439, 1426)
+script = ExtResource("6_itjuj")
+
+[node name="Portal3" parent="." instance=ExtResource("7_euyti")]
+modulate = Color(1, 0.329412, 0.32549, 1)
+position = Vector2(1451, -1451)
+rotation = -1.5708
+script = ExtResource("6_itjuj")
+
+[node name="SPACESHIP" parent="." instance=ExtResource("8_t0ts2")]
+position = Vector2(-1561, -1576)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SPACESHIP"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="monito" parent="." instance=ExtResource("10_1fh02")]
+position = Vector2(-358, -1247)
+rotation = 1.5708
+collision_layer = 10
+
+[node name="monito2" parent="." instance=ExtResource("10_1fh02")]
+position = Vector2(1344, 437)
+collision_layer = 10
+
+[node name="monito3" parent="." instance=ExtResource("10_xxvsp")]
+position = Vector2(-1194, 753)
+rotation = -3.14159
+
+[node name="monito4" parent="." instance=ExtResource("10_1fh02")]
+position = Vector2(-1182, 285)
+collision_layer = 10
+
+[node name="monito5" parent="." instance=ExtResource("11_d1mpm")]
+position = Vector2(737, -737)
+collision_layer = 10
+
+[node name="monito6" parent="." instance=ExtResource("11_d1mpm")]
+position = Vector2(793, 1054)
+rotation = 2.26893
+collision_layer = 10
+
+[node name="monito7" parent="." instance=ExtResource("10_xxvsp")]
+position = Vector2(1436, -937)
+
+[node name="Blast" parent="." instance=ExtResource("12_tsqc4")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1561, -1576)
+zoom = Vector2(0.8, 0.8)
+limit_left = -1800
+limit_top = -1800
+limit_right = 1800
+limit_bottom = 1800
+editor_draw_limits = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1914, -2)
+shape = SubResource("RectangleShape2D_drse7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 1899.5)
+shape = SubResource("RectangleShape2D_gjmh3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -1904)
+shape = SubResource("RectangleShape2D_gjmh3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1917, -1)
+shape = SubResource("RectangleShape2D_drse7")
+
+[node name="level3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_sy1ww")
+autoplay = true
