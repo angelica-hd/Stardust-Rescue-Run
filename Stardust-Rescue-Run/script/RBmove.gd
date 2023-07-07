@@ -15,6 +15,7 @@ var t0 = 0
 var moved = false
 var catched = false
 var escaped = false
+var level
 
 const max_fueld = 100
 var fueld = 100:
@@ -28,12 +29,14 @@ var fueld = 100:
 func _ready():
 	animation_player.play("fueguito")
 	var pos = position
+	level = Game.get_level()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
-	fueld -= (delta * Game.get_level())
+	fueld -= (delta * level)
 	cont.text = "     Nivel "+ str(Game.get_level() - 1) + "
 	Monitos: "+str(monitos)+"/"+str(Game.get_level_monitos())
 	if fueld < 0:
@@ -59,7 +62,12 @@ func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PRO
 				 escapa antes que se agote la gasolina de tu nave"
 			else:
 				t0 = 0
-
+	if Game.get_level() == 4: # PARA NIVEL FINAL
+		t0 = 0
+		if t0 < 4:
+			text.text = "Cuidado, escoge sabiamente..."
+			t0 += delta
+		
 
 func move():
 	var vector = Input.get_vector('ui_left', 'ui_right', 'ui_up', 'ui_down')
