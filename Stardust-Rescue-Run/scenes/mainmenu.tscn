@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="4_0ju60"]
 [ext_resource type="AudioStream" uid="uid://bsh8351qabg7b" path="res://assets/Ost/menus/pause_menu.wav" id="5_kbh2y"]
 [ext_resource type="PackedScene" uid="uid://bq2x07ryy47jr" path="res://scenes/menu_volume.tscn" id="5_txrxe"]
-[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/sfx/Confirm 1.wav" id="7_fev4f"]
+[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/SFX/Confirm 1.wav" id="7_fev4f"]
 
 [node name="Mainmenu" type="MarginContainer"]
 anchors_preset = 15
