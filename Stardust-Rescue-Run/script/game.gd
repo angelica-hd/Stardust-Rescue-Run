@@ -1,7 +1,7 @@
 extends Node
 
 @export var levels : Array[PackedScene]
-@export var level_monitos : Array[int] = [2, 3, 5, 7] 
+@export var level_monitos : Array[int] = [0, 0, 0, 0] 
 
 var level = -1
 #const blast_scene = preload("res://Blast.gd")
@@ -25,3 +25,6 @@ func get_level_monitos():
 	
 func get_level():
 	return level+1
+	
+func set_level(lvl):
+	level = lvl

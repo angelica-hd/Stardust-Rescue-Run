@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://duck2rscjnb27" path="res://assets/Fondos/Space2.png" id="2_jn6wm"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_ru7l0"]
 [ext_resource type="AudioStream" uid="uid://dbnci1u6juwba" path="res://assets/Ost/menus/complete1.mp3" id="4_8n0va"]
-[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/SFX/Confirm 1.wav" id="5_51frs"]
+[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/sfx/Confirm 1.wav" id="5_51frs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab3k7"]
 line_spacing = 7.0
