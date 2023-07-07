@@ -29,14 +29,13 @@ var fueld = 100:
 func _ready():
 	animation_player.play("fueguito")
 	var pos = position
-	level = Game.get_level()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _physics_process(delta): # CON PHYSICS PROCESS FUNCIONA SIEMPRE PERO EL PROFE DIJO QUE SE OCUPABA ESTE
 	move()
-	fueld -= (delta * level)
+	fueld -= (delta * Game.get_level())
 	cont.text = "     Nivel "+ str(Game.get_level() - 1) + "
 	Monitos: "+str(monitos)+"/"+str(Game.get_level_monitos())
 	if fueld < 0:

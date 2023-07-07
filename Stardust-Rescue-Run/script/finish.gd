@@ -16,5 +16,5 @@ func _on_menuu_pressed():
 func _on_restart_pressed():
 	$Confirm.play()
 	await($Confirm.finished)
-	Game.set_level(2)
+	Game.set_level(1)
 	get_tree().change_scene_to_file("res://scenes/nivel2.tscn")
