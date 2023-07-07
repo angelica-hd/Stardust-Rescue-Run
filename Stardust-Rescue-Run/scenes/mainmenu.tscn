@@ -111,7 +111,7 @@ text = "Exit"
 stream = ExtResource("5_kbh2y")
 volume_db = -10.0
 autoplay = true
-bus = &"Menu"
+bus = &"Niveles"
 
 [node name="Confirm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_fev4f")
