@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="3_7vjpt"]
 [ext_resource type="PackedScene" uid="uid://c24g58ab4jgo4" path="res://scenes/volume-bar.tscn" id="4_gfaxt"]
 [ext_resource type="PackedScene" uid="uid://df4dmypbp75bv" path="res://scenes/sfx-bar.tscn" id="5_elysi"]
-[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/SFX/Confirm 1.wav" id="5_norev"]
+[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/sfx/Confirm 1.wav" id="5_norev"]
 
 [sub_resource type="Theme" id="Theme_u15gu"]
 
