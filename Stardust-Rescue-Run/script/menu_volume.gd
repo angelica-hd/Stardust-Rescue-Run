@@ -1,7 +1,7 @@
 extends Control
 
 
-var menu_bus = AudioServer.get_bus_index("Menu")
+var menu_bus = AudioServer.get_bus_index("Niveles")
 	
 func _on_h_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(menu_bus, value)
