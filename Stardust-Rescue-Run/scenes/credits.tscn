@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://duck2rscjnb27" path="res://assets/Fondos/Space2.png" id="3_w0osb"]
 [ext_resource type="FontFile" uid="uid://gl6it2hl5brx" path="res://assets/Fuentes/SRAFreePixelFontPack/PixelMiddle.ttf" id="4_e3j7c"]
 [ext_resource type="AudioStream" uid="uid://bsh8351qabg7b" path="res://assets/Ost/menus/pause_menu.wav" id="5_6mpdm"]
-[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/SFX/Confirm 1.wav" id="6_ofxor"]
+[ext_resource type="AudioStream" uid="uid://jbg72bunxtuo" path="res://assets/sfx/Confirm 1.wav" id="6_ofxor"]
 
 [node name="Credits" type="MarginContainer"]
 anchors_preset = 15
@@ -75,13 +75,18 @@ theme_override_constants/outline_size = -4
 theme_override_constants/shadow_outline_size = 7
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("4_e3j7c")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 22
 text = "~Music~
 main menu -  LudoLoon Studio
-level 1 - Karman line
+tutorial - lowenergygirl
+level 1 - Kevin Macleod
+level 2 - Karman line
+level 3 - pvbl0h
 Game over - THE LIBERTED MUSIC
 ~sfx~
 game over - POGW
+buttons - JDWasabi
+catch - jdwasabi
 ~sprites~
 planets - Deep-Fold
 Backgrounds -  Deep-Fold
